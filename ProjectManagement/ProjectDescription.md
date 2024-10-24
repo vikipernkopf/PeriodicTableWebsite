@@ -4,7 +4,7 @@
 - The website contains a periodic table where you can see the necessary properties of the elements.
 
 ## Objectives
-- *[List the main objectives of your project. What do you hope to accomplish?]*
+- We create the website to provide an easier-to-access and more interactive periodic table.
 
 ## Features
 The website will include the following features:
@@ -31,4 +31,6 @@ The website will include the following features:
 - The project is on GitHub
 
 ## Resources
-- *[List any resources, tutorials, or references you plan to use.]*
+- Youtube
+- Wikipedia
+- Cheat Sheets
