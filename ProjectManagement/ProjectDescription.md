@@ -10,22 +10,25 @@
 The website will include the following features:
 
 1. **Homepage**
-    - *[Describe the content and purpose of your homepage.]*
+    - periodic table
+    - field where you can enter an element and you get the electron configuration
+    - welcome message
 
 2. **Navigation Menu**
-    - *[List and describe the navigation menu items.]* 
+    - the website won't have a navigation menu
 
 3. **Additional Pages/Sections**
-    - *[List and describe other pages like About, Portfolio, Services, Contact, etc.]*
-
+    - we won't have any additional pages or selections
 
 ## Technologies Used
-- **HTML**
-- **CSS**
-- **JavaScript**
+- HTML
+- CSS
 
 ## Deliverables
-- *[List what you will submit upon project completion, such as all source code files, documentation, and any other relevant materials.]*
+- README.md
+- ProjectDescription.md
+- index.html
+- style.css
 
 ## Submission Instructions
 - The project is on GitHub
