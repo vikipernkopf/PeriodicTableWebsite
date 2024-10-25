@@ -14,5 +14,28 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    opacity: 0.9;
+    background-color: lightblue;
+    background: linear-gradient(-50deg, #009fde, #5eb1e1);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+
+}
+.login-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
