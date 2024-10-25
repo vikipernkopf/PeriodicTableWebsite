@@ -1,11 +1,18 @@
 
-        /* Optional: Style the button */
-        .open-page-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: blue;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.open-website-button {
+    display: grid;
+    place-items: center;            
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.9;
+}
