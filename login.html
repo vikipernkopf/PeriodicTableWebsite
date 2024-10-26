@@ -8,21 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="login.php" method="POST">
+    <div class="login-box">
+        <form action="/login" method="POST">
             <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    <p>Try my periodic table mamma mia</p>
-    <p>im crazy</p>
-    <button class="open-website-button" onclick="openWebsite()">Open Website</button>
-
+        
+        
+    <button class="open-website-button" onclick="openWebsite()">Login</button>
+</form>
     <script>
         function openWebsite() {
-            window.location.href = 'login.html'; // Change to the filename of your other HTML file
+            window.location.href = 'index.html';
         }
     </script>
+    </div>
 </body>
 </html>

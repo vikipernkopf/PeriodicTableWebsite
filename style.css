@@ -1,41 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(-50deg, #009fde, #5eb1e1);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
-.open-website-button {
-    display: grid;
-    place-items: center;            
+.login-box {
+    background-color: #aad4f1;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 320px;
+}
+
+.login-box input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.login-box button {
     background-color: black;
     color: white;
     padding: 10px 20px;
-    margin: auto;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: lightblue;
-    background: linear-gradient(-50deg, #009fde, #5eb1e1);
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
-
-}
-.login-container {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: transparent;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
