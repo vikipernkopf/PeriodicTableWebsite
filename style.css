@@ -47,6 +47,11 @@
     outline: none;
 }
 
+h1 {
+    margin-bottom: 0;
+    font-size: 32px;
+}
+
 table, th, tr, td {
     border: 2px solid black;
     padding: 10px 10px;
@@ -65,4 +70,8 @@ table, th, tr, td {
 
 .invisible {
     border: 0;
+}
+
+.margin {
+    border-spacing: 50px !important;
 }
