@@ -48,13 +48,21 @@
 }
 
 table, th, tr, td {
-    border: 2px solid black ;
+    border: 2px solid black;
     padding: 10px 10px;
     border-radius: 20px;
     text-align: center;
     margin: 10px 0;
 }
 
-th {
-    margin: 10px 0;
+#big-header {
+    font-size: 20px;
+}
+
+#extra-elements {
+    width: 75%;
+}
+
+.invisible {
+    border: 0;
 }
