@@ -19,10 +19,6 @@
     color: rgb(0, 0, 0);
 }
 
-#big-header {
-    font-size: 20px;
-}
-
 #description tr td {
     min-width: 170px !important;
 }
@@ -62,7 +58,20 @@
 /*title*/
 h1 {
     margin-bottom: 0;
-    font-size: 32px;
+
+    a:link, a:visited, a:active {
+        color: #000000;
+        background-color: transparent;
+        text-decoration: none;
+        transition: 100ms;
+    }
+    
+    a:hover {
+        color: #000000;
+        background-color: transparent;
+        text-decoration: underline;
+        font-size: 40px;
+    }
 }
 
 /*table*/
@@ -87,6 +96,8 @@ td {
 }
 
 /*colors for element groups*/
+
+
 .noble-gas {
     background-color: #ffe7eb;
     color: #d05c95;
