@@ -15,8 +15,8 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 #big-header {
@@ -67,7 +67,7 @@ h1 {
 
 /*table*/
 table, th, tr, td {
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     padding: 10px 10px;
     border-radius: 20px;
     text-align: center;
@@ -88,41 +88,61 @@ td {
 
 /*colors for element groups*/
 .noble-gas {
-    background-color: #623842;
+    background-color: #ffe7eb;
+    color: #d05c95;
+    border: 2px solid #d05c95;
 }
 
 .reactive-non-metal {
-    background-color: #2a4165;
+    background-color: #e2eeff;
+    color:#407bf1;
+    border: 2px solid #407bf1;
 }
 
 .metalloid {
-    background-color: #523e1b;
+    background-color: #fef7e0;
+    color: #a37933;
+    border: 2px solid #a37933;
 }
 
 .post-transition-metal {
-    background-color: #2f4d47;
+    background-color: #ffe6d4;
+    color: #0e380f;
+    border:2px solid #0e380f;
 }
 
 .transition-metal {
-    background-color: #433c65;
+    background-color: #f3e8fd;
+    color: #6b8cf3;
+    border:2px solid #6b8cf3;
 }
 
 .unknown-properties {
-    background-color: #46474c;
+    background-color: #e7e7ea;
+    color: #5e586c;
+    border:2px solid #5e586c;
 }
 
 .alkali-metal {
-    background-color: #244d57;
+    background-color: #d8f8ff;
+    color: #6cadb8;
+    border:2px solid #6cadb8;
 }
 
 .alkaline-earth-metal {
-    background-color: #622e39;
+    background-color: #ffe7eb;
+    color: #dd2d2e;
+    border:2px solid #dd2d2e;
 }
 
 .lanthanide {
-    background-color: #004a77;
+    background-color: #e2eeff;
+    color: #2b5592;
+    border:2px solid #2b5592;
 }
 
 .actinide {
-    background-color: #613b28;
+    background-color: #ffe6d4;
+    color: #d56235;
+    border:2px solid #d56235;
 }
