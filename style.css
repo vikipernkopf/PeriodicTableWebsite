@@ -62,20 +62,24 @@ table, th, tr, td {
     margin: 10px 0;
 }
 
+td {
+    min-width: 50px;
+}
+
 #big-header {
     font-size: 20px;
 }
 
-#extra-elements {
-    width: 75%;
+#description tr td {
+    min-width: 170px !important;
+}
+
+.period {
+    min-width: 0 !important;
 }
 
 .invisible {
     border: 0;
-}
-
-.margin {
-    border-spacing: 50px !important;
 }
 
 /*colors for element groups*/
