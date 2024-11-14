@@ -28,6 +28,7 @@ The website will include the following features:
 - README.md
 - ProjectDescription.md
 - index.html
+- periodic-table.html
 - style.css
 
 ## Submission Instructions
@@ -36,4 +37,5 @@ The website will include the following features:
 ## Resources
 - Youtube
 - Wikipedia
+- own research
 - Cheat Sheets
