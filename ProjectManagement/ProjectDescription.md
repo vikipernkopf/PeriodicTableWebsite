@@ -18,16 +18,18 @@ The website will include the following features:
     - the website won't have a navigation menu
 
 3. **Additional Pages/Sections**
-    - we won't have any additional pages or selections
+    - login.html
 
 ## Technologies Used
 - HTML
 - CSS
+- JavaScript
 
 ## Deliverables
 - README.md
 - ProjectDescription.md
 - index.html
+- login.html
 - periodic-table.html
 - style.css
 
@@ -37,5 +39,4 @@ The website will include the following features:
 ## Resources
 - Youtube
 - Wikipedia
-- own research
 - Cheat Sheets
