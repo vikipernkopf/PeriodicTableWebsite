@@ -17,8 +17,9 @@
     gap: 20px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-}
+    background: linear-gradient(-50deg, #edfafa, #e3fafa);
 
+}
 #description tr td {
     min-width: 170px !important;
 }
