@@ -10,6 +10,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="mainpage">
+    <h1 id="welcomeMessage">Loading...</h1>
+    <button id="logoutButton">Logout</button>
+
+    <script>
+        // Display username if it exists in localStorage
+        document.addEventListener('DOMContentLoaded', function () {
+            const username = localStorage.getItem('username');
+            const welcomeMessage = document.getElementById('welcomeMessage');
+
+            if (username) {
+                // Show the personalized welcome message
+                welcomeMessage.textContent = `Hello, ${username}!`;
+            } else {
+                // Redirect to login.html if no username is stored
+                window.location.href = 'login.html';
+            }
+        });
+
+        // Handle logout
+        document.getElementById('logoutButton').addEventListener('click', function () {
+            // Clear the username from localStorage
+            localStorage.removeItem('username');
+
+            // Redirect to login.html
+            window.location.href = 'login.html';
+        });
+    </script>
+        
     <h1><a target="blank" href="https://en.wikipedia.org/wiki/Periodic_table" title="Periodic Table"> Periodic Table</a></h1>
     <table>
         <tr>
