@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Periodic Login</title>
+    <link rel="icon" type="favicon" href="pics/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,8 +16,7 @@
                 <path d="M7 16h10"/>
             </svg>
         </div>
-        <h2>Periodic Login</h2>
-        <h2>Periodic Login</h2>
+        <h2>Periodic Login</h2><br>
 <div class="form-group">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="7" r="4"/> 
@@ -28,7 +28,7 @@
 
 <script>
     function handleLogin(event) {
-        event.preventDefault();
+        
         
         const username = document.getElementById('username').value.trim();
         if (username) {
@@ -43,7 +43,7 @@
             // Redirect to index.html
             window.location.href = "index.html";
         } else {
-            alert('Please enter a valid username.');
+            alert('Please enter a username.');
         }
     }
 </script>
