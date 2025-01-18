@@ -16,7 +16,7 @@
     gap: 20px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    background: linear-gradient(135deg, #cbcde5, #b5bcd4, #bebed8);
+    background: linear-gradient(-50deg, #ffffff, #fccaf9, #a9baa7);
 
 }
 #description tr td {
@@ -191,20 +191,22 @@ table, th, tr, td {
     border-radius: 20px;
     text-align: center;
     margin: 10px 0;
+    background-color: rgba(163, 189, 208, 0.59);
 }
 
 td {
     min-width: 50px;
     position: relative; /* For hover effect */
     transition: transform 0.2s ease; /* Smooth transition for hover */
-    font-family: Arial, sans-serif;
-    font-weight: bold;
 }
 
 td:hover {
-    transform: scale(1.5);  /* Scale effect when hovered */
+    transform: scale(1.1);  /* Scale effect when hovered */
     z-index: 1;  /* Make sure it overlays other cells */
     box-shadow:0 0 10px #000000;
+}
+a:link, a:visited, a:active{
+    text-decoration: none;
 }
 
 /* Periodic Table Element Groups */
@@ -232,7 +234,6 @@ td:hover {
     border-color: #d05c95;
     a:link, a:visited, a:active {
         color: #d05c95;
-        text-decoration: none;
     }
 
 }
@@ -243,7 +244,6 @@ td:hover {
     border-color: #407bf1;
     a:link, a:visited, a:active {
         color: #407bf1;
-        text-decoration: none;
     }
 
 }
@@ -254,7 +254,6 @@ td:hover {
     border-color: #a37933;
     a:link, a:visited, a:active {
         color: #a37933;
-        text-decoration: none;
     }
 
 }
@@ -265,7 +264,6 @@ td:hover {
     border-color: #0e380f;
     a:link, a:visited, a:active {
         color: #0e380f;
-        text-decoration: none;
     }
 
 }
@@ -276,7 +274,6 @@ td:hover {
     border-color: #6b8cf3;
     a:link, a:visited, a:active {
         color: #6b8cf3;
-        text-decoration: none;
     }
 }
 
@@ -286,7 +283,6 @@ td:hover {
     border-color: #5e586c;
     a:link, a:visited, a:active {
         color: #5e586c;
-        text-decoration: none;
     }
 }
 
@@ -296,7 +292,6 @@ td:hover {
     border-color: #6cadb8;
     a:link, a:visited, a:active {
         color: #6cadb8;
-        text-decoration: none;
     }
 }
 
@@ -306,7 +301,6 @@ td:hover {
     border-color: #dd2d2e;
     a:link, a:visited, a:active {
         color: #dd2d2e;
-        text-decoration: none;
     }
 
 }
@@ -317,7 +311,6 @@ td:hover {
     border-color: #2b5592;
     a:link, a:visited, a:active {
         color: #2b5592;
-        text-decoration: none;
     }
 
 }
@@ -328,7 +321,6 @@ td:hover {
     border-color: #d56235;
     a:link, a:visited, a:active {
         color: #d56235;
-        text-decoration: none;
     }
 
 }
@@ -339,5 +331,9 @@ td:hover {
 }
 
 .invisible {
-    border: 0;
+    background-color: #f5f5f5;
+    color: rgba(255, 255, 255, 0.91);
+    border: 2px dashed #d3d3d3;
+    pointer-events: none;
 }
+
