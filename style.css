@@ -16,7 +16,7 @@
     gap: 20px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    background: linear-gradient(-50deg, #edfafa, #e3fafa);
+    background: linear-gradient(135deg, #cbcde5, #b5bcd4, #bebed8);
 
 }
 #description tr td {
@@ -175,7 +175,7 @@ h1 {
         text-decoration: none;
         transition: 100ms;
     }
-    
+
     a:hover {
         color: #000000;
         background-color: transparent;
@@ -184,7 +184,7 @@ h1 {
     }
 }
 
-/*table*/
+/* Table Styles */
 table, th, tr, td {
     border: 2px solid rgb(0, 0, 0);
     padding: 10px 10px;
@@ -195,213 +195,149 @@ table, th, tr, td {
 
 td {
     min-width: 50px;
+    position: relative; /* For hover effect */
+    transition: transform 0.2s ease; /* Smooth transition for hover */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
-.period {
-    min-width: 0 !important;
+td:hover {
+    transform: scale(1.5);  /* Scale effect when hovered */
+    z-index: 1;  /* Make sure it overlays other cells */
+    box-shadow:0 0 10px #000000;
 }
 
-.invisible {
-    border: 0;
+/* Periodic Table Element Groups */
+.element-group {
+    color: inherit;
+    border: 2px solid;
+    transition: background-color 100ms, color 100ms;
 }
 
-/*colors for element groups*/
+.element-group a {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+    transition: 100ms;
+}
+
+.element-group a:hover {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
 .noble-gas {
     background-color: #ffe7eb;
     color: #d05c95;
-    border: 2px solid #d05c95;
-
+    border-color: #d05c95;
     a:link, a:visited, a:active {
         color: #d05c95;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
     }
-    
-    a:hover {
-        color: #d05c95;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+
 }
 
 .reactive-non-metal {
     background-color: #e2eeff;
-    color:#407bf1;
-    border: 2px solid #407bf1;
-
+    color: #407bf1;
+    border-color: #407bf1;
     a:link, a:visited, a:active {
         color: #407bf1;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
     }
-    
-    a:hover {
-        color: #407bf1;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+
 }
 
 .metalloid {
     background-color: #fef7e0;
     color: #a37933;
-    border: 2px solid #a37933;
-
+    border-color: #a37933;
     a:link, a:visited, a:active {
         color: #a37933;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
     }
-    
-    a:hover {
-        color: #a37933;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+
 }
 
 .post-transition-metal {
     background-color: #ffe6d4;
     color: #0e380f;
-    border:2px solid #0e380f;
-
+    border-color: #0e380f;
     a:link, a:visited, a:active {
         color: #0e380f;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
     }
-    
-    a:hover {
-        color: #0e380f;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+
 }
 
 .transition-metal {
     background-color: #f3e8fd;
     color: #6b8cf3;
-    border:2px solid #6b8cf3;
-
+    border-color: #6b8cf3;
     a:link, a:visited, a:active {
         color: #6b8cf3;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
-    }
-    
-    a:hover {
-        color: #6b8cf3;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
     }
 }
 
 .unknown-properties {
     background-color: #e7e7ea;
     color: #5e586c;
-    border:2px solid #5e586c;
-
+    border-color: #5e586c;
     a:link, a:visited, a:active {
         color: #5e586c;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
-    }
-    
-    a:hover {
-        color: #5e586c;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
     }
 }
 
 .alkali-metal {
     background-color: #d8f8ff;
     color: #6cadb8;
-    border:2px solid #6cadb8;
-
+    border-color: #6cadb8;
     a:link, a:visited, a:active {
         color: #6cadb8;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
-    }
-    
-    a:hover {
-        color: #6cadb8;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
     }
 }
 
 .alkaline-earth-metal {
     background-color: #ffe7eb;
     color: #dd2d2e;
-    border:2px solid #dd2d2e;
-
+    border-color: #dd2d2e;
     a:link, a:visited, a:active {
         color: #dd2d2e;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
     }
-    
-    a:hover {
-        color: #dd2d2e;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+
 }
 
 .lanthanide {
     background-color: #e2eeff;
     color: #2b5592;
-    border:2px solid #2b5592;
-
+    border-color: #2b5592;
     a:link, a:visited, a:active {
         color: #2b5592;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
     }
-    
-    a:hover {
-        color: #2b5592;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+
 }
 
 .actinide {
     background-color: #ffe6d4;
     color: #d56235;
-    border:2px solid #d56235;
-
+    border-color: #d56235;
     a:link, a:visited, a:active {
         color: #d56235;
-        background-color: transparent;
         text-decoration: none;
-        transition: 100ms;
     }
-    
-    a:hover {
-        color: #d56235;
-        background-color: transparent;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+
+}
+
+/* Specific visibility properties */
+.period {
+    min-width: 0 !important;
+}
+
+.invisible {
+    border: 0;
 }
