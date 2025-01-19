@@ -31,6 +31,7 @@ The website will include the following features:
 - index.html
 - login.html
 - style.css
+- script.js
 
 ## Submission Instructions
 - The project is on GitHub

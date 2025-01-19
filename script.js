@@ -1,17 +1,15 @@
-function handleLogin(event) {
-        
-        
+function handleLogin() {
     const username = document.getElementById('username').value.trim();
+
     if (username) {
-        // Save the username in localStorage
+        //save the username in local storage
         localStorage.setItem('username', username);
 
         const timestamp = new Date().toLocaleString();
         const logEntry = `[${timestamp}] Login attempt - ${username}`;
-        
-        console.log(logEntry); // Log to console or display somewhere
+        console.log(logEntry); //log to console or display somewhere
 
-        // Redirect to index.html
+        //redirect to index.html
         window.location.href = "index.html";
     } else {
         alert('Please enter a username.');
