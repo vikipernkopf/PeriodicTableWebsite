@@ -348,7 +348,8 @@ a:link, a:visited, a:active{
 
 .invisible {
     pointer-events: none;
-    border: hidden;
+    border: none;
+    background-color: transparent;
 }
 
 #description tr td {
