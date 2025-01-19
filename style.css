@@ -1,35 +1,23 @@
-/*id*/
-#login {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+/*login page*/
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 24px;
 }
 
-#mainpage {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255) linear-gradient(-50deg, #ffffff, #fccaf9, #a9baa7);
-
-}
-#description tr td {
-    min-width: 170px !important;
+#login-button {
+    width: 100%;
 }
 
-/*login*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+#login-page {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     min-height: 100vh;
     background: linear-gradient(135deg, #000000, #2c4293, #000000);
@@ -49,6 +37,8 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/*logo*/
 
 .logo {
     width: 80px;
@@ -76,19 +66,14 @@ body {
     font-weight: bold;
 }
 
-h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 8px;
-    font-size: 24px;
-}
-
 .subtitle {
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
     margin-bottom: 32px;
     font-size: 14px;
 }
+
+/*form*/
 
 .form-group {
     margin-bottom: 20px;
@@ -104,6 +89,8 @@ h2 {
     height: 20px;
     color: rgba(255, 255, 255, 0.6);
 }
+
+/*input*/
 
 input {
     width: 100%;
@@ -126,23 +113,7 @@ input:focus {
     background: rgba(255, 255, 255, 0.15);
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background: #000000;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background: #171615;
-    transform: translateY(-1px);
-}
+/*login log*/
 
 #loginLog {
     margin-top: 24px;
@@ -164,7 +135,18 @@ button:hover {
     border-bottom: none;
 }
 
-/*title*/
+/*index.html*/
+
+#mainpage {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255) linear-gradient(-50deg, #ffffff, #fccaf9, #a9baa7);
+}
+
 h1 {
     margin-bottom: 0;
 
@@ -183,14 +165,52 @@ h1 {
     }
 }
 
-/* Table Styles */
+#user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 35px;
+    background-color: rgba(163, 189, 208, 0.59);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+#logout-button {
+    margin-left: 10px;
+}
+
+/*button*/
+
+button {
+    padding: 12px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #171615;
+    transform: translateY(-1px);
+}
+
+/*table*/
+
+table {
+    background-color: rgba(163, 189, 208, 0.59);
+}
+
 table, th, tr, td {
     border: 2px solid rgb(0, 0, 0);
     padding: 10px 10px;
     border-radius: 20px;
     text-align: center;
     margin: 10px 0;
-    background-color: rgba(163, 189, 208, 0.59);
 }
 
 td {
@@ -204,11 +224,13 @@ td:hover {
     z-index: 1;  /* Make sure it overlays other cells */
     box-shadow:0 0 10px #000000;
 }
+
 a:link, a:visited, a:active{
     text-decoration: none;
 }
 
-/* Periodic Table Element Groups */
+/*periodic table element groups */
+
 .element-group {
     color: inherit;
     border: 2px solid;
@@ -324,7 +346,8 @@ a:link, a:visited, a:active{
 
 }
 
-/* Specific visibility properties */
+/*specific visibility properties*/
+
 .period {
     min-width: 0 !important;
 }
@@ -332,4 +355,8 @@ a:link, a:visited, a:active{
 .invisible {
     pointer-events: none;
     border: hidden;
+}
+
+#description tr td {
+    min-width: 170px !important;
 }

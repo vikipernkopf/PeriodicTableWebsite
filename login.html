@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body id="login-page">
     <div class="container">
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -25,7 +25,7 @@
             </svg>
             <label for="username"></label><input type="text" id="username" placeholder="Username" required>
         </div>
-        <button onclick="handleLogin()" type="submit">Log In</button>
+        <button id="login-button" onclick="handleLogin()" type="submit">Log In</button>
     </div>
 </body>
 </html>
