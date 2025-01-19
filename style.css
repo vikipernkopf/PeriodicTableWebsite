@@ -1,22 +1,12 @@
-/*login page*/
-
-h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 8px;
-    font-size: 24px;
-}
-
-#login-button {
-    width: 100%;
-    border-radius: 8px;
-}
+/*general*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*login page*/
 
 #login-page {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -37,6 +27,18 @@ h2 {
     padding: 32px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+#login-button {
+    width: 100%;
+    border-radius: 8px;
 }
 
 /*logo*/
@@ -107,28 +109,6 @@ input:focus {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/*login log*/
-
-#loginLog {
-    margin-top: 24px;
-    padding: 16px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-#loginLog div {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#loginLog div:last-child {
-    border-bottom: none;
-}
-
 /*index.html*/
 
 #mainpage {
@@ -159,15 +139,18 @@ h1 {
     }
 }
 
+.outer-group {
+    background-color: rgba(163, 189, 208, 0.59);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
 #user-info {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 35px;
-    background-color: rgba(163, 189, 208, 0.59);
-    border: 2px solid rgb(0, 0, 0);
-    padding: 10px 10px;
-    border-radius: 20px;
 }
 
 #logout-button {
@@ -195,10 +178,6 @@ button:hover {
 
 /*table*/
 
-table {
-    background-color: rgba(163, 189, 208, 0.59);
-}
-
 table, th, tr, td {
     border: 2px solid rgb(0, 0, 0);
     padding: 10px 10px;
@@ -208,85 +187,68 @@ table, th, tr, td {
 }
 
 td {
-    min-width: 50px;
-    position: relative; /* For hover effect */
-    transition: transform 0.2s ease; /* Smooth transition for hover */
+    min-width: 85px;
+    position: relative; /* for hover effect */
+    transition: transform 0.2s ease; /* smooth transition for hover */
 }
 
 td:hover {
-    transform: scale(1.1);  /* Scale effect when hovered */
-    z-index: 1;  /* Make sure it overlays other cells */
-    box-shadow:0 0 10px #000000;
+    transform: scale(1.1);  /* scale effect when hovered */
+    z-index: 1;  /* make sure it overlays other cells */
+    box-shadow: 0 0 10px #000000;
 }
 
 a:link, a:visited, a:active{
     text-decoration: none;
 }
 
-/*periodic table element groups */
-
-.element-group {
-    color: inherit;
-    border: 2px solid;
-    transition: background-color 100ms, color 100ms;
-}
-
-.element-group a {
-    color: inherit;
-    background-color: transparent;
-    text-decoration: none;
-    transition: 100ms;
-}
-
-.element-group a:hover {
-    text-decoration: underline;
-    font-size: 20px;
-}
+/*periodic table element groups*/
 
 .noble-gas {
     background-color: #ffe7eb;
     color: #d05c95;
     border-color: #d05c95;
+
     a:link, a:visited, a:active {
         color: #d05c95;
     }
-
 }
 
 .reactive-non-metal {
     background-color: #e2eeff;
     color: #407bf1;
     border-color: #407bf1;
+
     a:link, a:visited, a:active {
         color: #407bf1;
     }
-
 }
 
 .metalloid {
     background-color: #fef7e0;
     color: #a37933;
     border-color: #a37933;
+
     a:link, a:visited, a:active {
         color: #a37933;
     }
-
 }
 
 .post-transition-metal {
     background-color: #ffe6d4;
     color: #0e380f;
     border-color: #0e380f;
+
     a:link, a:visited, a:active {
         color: #0e380f;
     }
-
 }
 
 .transition-metal {
     background-color: #f3e8fd;
     color: #6b8cf3;
     border-color: #6b8cf3;
+
     a:link, a:visited, a:active {
         color: #6b8cf3;
     }
@@ -296,6 +258,7 @@ a:link, a:visited, a:active{
     background-color: #e7e7ea;
     color: #5e586c;
     border-color: #5e586c;
+
     a:link, a:visited, a:active {
         color: #5e586c;
     }
@@ -305,6 +268,7 @@ a:link, a:visited, a:active{
     background-color: #d8f8ff;
     color: #6cadb8;
     border-color: #6cadb8;
+
     a:link, a:visited, a:active {
         color: #6cadb8;
     }
@@ -314,36 +278,42 @@ a:link, a:visited, a:active{
     background-color: #ffe7eb;
     color: #dd2d2e;
     border-color: #dd2d2e;
+
     a:link, a:visited, a:active {
         color: #dd2d2e;
     }
-
 }
 
 .lanthanide {
     background-color: #e2eeff;
     color: #2b5592;
     border-color: #2b5592;
+
     a:link, a:visited, a:active {
         color: #2b5592;
     }
-
 }
 
 .actinide {
     background-color: #ffe6d4;
     color: #d56235;
     border-color: #d56235;
+
     a:link, a:visited, a:active {
         color: #d56235;
     }
-
 }
 
 /*specific visibility properties*/
 
 .period {
     min-width: 0 !important;
+}
+
+.period:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    z-index: 0 !important;
 }
 
 .invisible {
