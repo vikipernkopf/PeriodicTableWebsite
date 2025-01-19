@@ -12,27 +12,25 @@
 <body id="mainpage">
     <h1 id="welcomeMessage">Loading...</h1>
     <button id="logoutButton">Logout</button>
-    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const username = localStorage.getItem('username');
             const welcomeMessage = document.getElementById('welcomeMessage');
     
             if (username) {
-                // Personalized welcome message
+                //personalized welcome message
                 welcomeMessage.textContent = `Hello, ${username}!`;
             }
         });
     
         document.getElementById('logoutButton').addEventListener('click', function () {
-            // Remove username from localStorage
+            //remove username from local storage
             localStorage.removeItem('username');
     
-            // Redirect to login page
+            //redirect to login page
             window.location.href = 'login.html';
         });
     </script>
-        
     <h1><a target="blank" href="https://en.wikipedia.org/wiki/Periodic_table" title="Periodic Table"> Periodic Table</a></h1>
     <table>
         <tr>

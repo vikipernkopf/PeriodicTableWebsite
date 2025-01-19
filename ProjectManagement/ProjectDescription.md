@@ -30,7 +30,6 @@ The website will include the following features:
 - ProjectDescription.md
 - index.html
 - login.html
-- periodic-table.html
 - style.css
 
 ## Submission Instructions
