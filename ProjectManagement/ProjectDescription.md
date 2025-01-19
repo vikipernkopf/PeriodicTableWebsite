@@ -11,7 +11,7 @@ The website will include the following features:
 
 1. **Homepage**
     - periodic table
-    - field where you can enter an element and you get the electron configuration
+    - field where you can enter an element, and you get the electron configuration
     - welcome message
 
 2. **Navigation Menu**
@@ -30,11 +30,12 @@ The website will include the following features:
 - ProjectDescription.md
 - index.html
 - login.html
-- style.css
+- index-style.css
+- login-style.css
 - script.js
 
 ## Submission Instructions
-- The project is on GitHub
+- the project is available on GitHub
 
 ## Resources
 - Youtube
