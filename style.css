@@ -117,8 +117,10 @@ input:focus {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 20px 20px;
     color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255) linear-gradient(-50deg, #ffffff, #fccaf9, #a9baa7);
+    background-image: linear-gradient(-50deg, #ffffff, #fccaf9, #a9baa7);
+    background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -187,10 +189,14 @@ table, th, tr, td {
 }
 
 td {
-    min-width: 85px;
+    /*min-width: 80px;*/
     position: relative; /* for hover effect */
     transition: transform 0.2s ease; /* smooth transition for hover */
 }
+
+/*#extra-elements td {
+    min-width: 65px;
+}*/
 
 td:hover {
     transform: scale(1.1);  /* scale effect when hovered */
