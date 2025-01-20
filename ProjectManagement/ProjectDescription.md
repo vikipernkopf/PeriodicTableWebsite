@@ -30,6 +30,7 @@ The website will include the following features:
 - ProjectDescription.md
 - index.html
 - login.html
+- style.css
 - index-style.css
 - login-style.css
 - script.js
