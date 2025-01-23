@@ -16,6 +16,14 @@ function handleLogin() {
     }
 }
 
-/*function printGroups() {
-    const groups = ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5'];
-}*/
+function printGroups() {
+    const groups = File.read('C:\\Users\\Antonio\\Desktop\\School\\Y2\\WMC\\ProgramDescriptionWebsite\\Files\\Groups');
+    const groupsArray = groups.split(';');
+
+    let tableHeaders = '';
+    for (let i = 0; i < groupsArray.length; i++) {
+        tableHeaders += `<th>${groupsArray[i]}</th>`;
+    }
+
+    document.getElementById('groups').innerHTML = `<tr>${tableHeaders}</tr>`;
+}

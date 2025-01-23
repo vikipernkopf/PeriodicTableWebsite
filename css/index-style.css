@@ -51,7 +51,7 @@ h1 {
 table, th, tr, td {
     border: 2px solid rgb(0, 0, 0);
     padding: 10px 10px;
-    border-radius: 10px;
+    border-radius: 13px;
     text-align: center;
     margin: 10px 0;
 }
