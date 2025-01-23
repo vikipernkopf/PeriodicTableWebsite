@@ -10,7 +10,7 @@ function handleLogin() {
         console.log(logEntry); //log to console or display somewhere
 
         //redirect to index.html
-        window.location.href = "index.html";
+        window.location.href = "periodic-table.html";
     } else {
         alert('Please enter a username.');
     }

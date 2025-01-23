@@ -27,7 +27,9 @@ h1 {
         /*font-size: 40px;*/
     }
 }
-
+a:link, a:visited, a:active {
+    display: block;
+}
 .outer-group {
     background-color: rgba(209, 255, 250, 0.59);
     border: 2px solid rgb(0, 0, 0);
