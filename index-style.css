@@ -51,13 +51,13 @@ h1 {
 table, th, tr, td {
     border: 2px solid rgb(0, 0, 0);
     padding: 10px 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     margin: 10px 0;
 }
 
 td {
-    /*min-width: 80px;*/
+    min-width: 70px;
     position: relative;
     transition: transform 0.2s ease;
 }

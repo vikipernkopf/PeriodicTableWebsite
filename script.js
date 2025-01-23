@@ -15,3 +15,7 @@ function handleLogin() {
         alert('Please enter a username.');
     }
 }
+
+/*function printGroups() {
+    const groups = ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5'];
+}*/
