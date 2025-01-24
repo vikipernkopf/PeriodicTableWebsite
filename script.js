@@ -1,5 +1,11 @@
 function handleLogin() {
     const username = document.getElementById('username').value.trim();
+    const maxLength = 20;
+
+    if (username.length > maxLength) {
+        alert(`Username must be ${maxLength} characters or less.`);
+        return;
+    }
 
     if (username) {
         //save the username in local storage
@@ -14,16 +20,4 @@ function handleLogin() {
     } else {
         alert('Please enter a username.');
     }
-}
-
-function printGroups() {
-    const groups = File.read('C:\\Users\\Antonio\\Desktop\\School\\Y2\\WMC\\ProgramDescriptionWebsite\\Files\\Groups');
-    const groupsArray = groups.split(';');
-
-    let tableHeaders = '';
-    for (let i = 0; i < groupsArray.length; i++) {
-        tableHeaders += `<th>${groupsArray[i]}</th>`;
-    }
-
-    document.getElementById('groups').innerHTML = `<tr>${tableHeaders}</tr>`;
 }

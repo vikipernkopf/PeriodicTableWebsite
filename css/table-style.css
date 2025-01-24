@@ -1,0 +1,232 @@
+/*index.html*/
+
+#mainpage {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 20px;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(-50deg, #7abbe3, #ffffff, #7abbe3);
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    a:link, a:visited, a:active {
+        color: #000000;
+        background-color: transparent;
+        text-decoration: none;
+        transition: 100ms;
+    }
+
+    a:hover {
+        color: #000000;
+        background-color: transparent;
+        text-decoration: underline;
+        /*font-size: 40px;*/
+    }
+}
+a:link, a:visited, a:active {
+    display: block;
+}
+.outer-group {
+    background-color: rgba(209, 255, 250, 0.59);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+#user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    margin-top: 35px;
+}
+
+#logout-button {
+    margin-left: 10px;
+}
+
+/*table*/
+
+table, tr, td {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 0;
+    border-radius: 13px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+th{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 13px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+tr {
+    padding: 10px 10px;
+}
+
+td {
+    min-width: 70px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+
+#description tr td {
+    min-width: 170px !important;
+}
+
+/*#extra-elements td {
+    min-width: 65px;
+}*/
+
+td:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 0 10px #000000;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+/*specific visibility properties*/
+
+.period {
+    min-width: 50px !important;
+}
+
+.period:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    z-index: 0 !important;
+}
+
+.invisible {
+    pointer-events: none;
+    border: none;
+    background-color: transparent;
+}
+
+/*periodic table element groups*/
+
+.noble-gas {
+    background-color: #ffe7eb;
+    color: #d05c95;
+    border-color: #d05c95;
+    a:link, a:visited, a:active {
+        color: #d05c95;
+        display: block;
+        padding: 10px 10px;
+    }
+
+}
+
+.reactive-non-metal {
+    background-color: #e2eeff;
+    color: #407bf1;
+    border-color: #407bf1;
+    a:link, a:visited, a:active {
+        color: #407bf1;
+        display: block;
+        padding: 10px 10px;
+    }
+
+}
+
+.metalloid {
+    background-color: #fef7e0;
+    color: #a37933;
+    border-color: #a37933;
+    a:link, a:visited, a:active {
+        color: #a37933;
+        display: block;
+        padding: 10px 10px;
+    }
+
+}
+
+.post-transition-metal {
+    background-color: #ffe6d4;
+    color: #0e380f;
+    border-color: #0e380f;
+    a:link, a:visited, a:active {
+        color: #0e380f;
+        display: block;
+        padding: 10px 10px;
+    }
+
+}
+
+.transition-metal {
+    background-color: #f3e8fd;
+    color: #6b8cf3;
+    border-color: #6b8cf3;
+    a:link, a:visited, a:active {
+        color: #6b8cf3;
+        display: block;
+        padding: 10px 10px;
+    }
+}
+
+.unknown-properties {
+    background-color: #e7e7ea;
+    color: #5e586c;
+    border-color: #5e586c;
+    a:link, a:visited, a:active {
+        color: #5e586c;
+        display: block;
+        padding: 10px 10px;
+    }
+}
+
+.alkali-metal {
+    background-color: #d8f8ff;
+    color: #6cadb8;
+    border-color: #6cadb8;
+    a:link, a:visited, a:active {
+        color: #6cadb8;
+        display: block;
+        padding: 10px 10px;
+    }
+}
+
+.alkaline-earth-metal {
+    background-color: #ffe7eb;
+    color: #dd2d2e;
+    border-color: #dd2d2e;
+    a:link, a:visited, a:active {
+        color: #dd2d2e;
+        display: block;
+        padding: 10px 10px;
+    }
+
+}
+
+.lanthanide {
+    background-color: #e2eeff;
+    color: #2b5592;
+    border-color: #2b5592;
+    a:link, a:visited, a:active {
+        color: #2b5592;
+        display: block;
+        padding: 10px 10px;
+    }
+
+}
+.actinide {
+    background-color: #ffe6d4;
+    color: #d56235;
+    border-color: #d56235;
+    a:link, a:visited, a:active {
+        color: #d56235;
+        display: block;
+        padding: 10px 10px;
+    }
+
+}
