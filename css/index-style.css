@@ -80,8 +80,8 @@ body {
     --list_btn_outline_color: rgb(212, 210, 210);
     --list_offset: 0.35em;
     --list_btn_font_size: 14px;
-    --list_position_left: 0;
-    --list_position_right: unset;
+    --list_position_left: unset;
+    --list_position_right: 0;
 
     /*👆 if you want to change sides just switch one property*/
     /*from properties to "unset" and the other to 0*/
