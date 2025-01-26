@@ -7,22 +7,40 @@ body {
 }
 
 .navbar {
-    background: radial-gradient(circle, cadetblue, cornflowerblue);
+    background: radial-gradient(circle, gray, black);
     padding: 5px 1px;
     font-size: 20px;
 }
 
 .nav-item {
-    margin-right: 200px; /* Space between items */
+    margin-right: 0; /*space between items*/
 }
 
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-.nav-link:hover{
+.nav-link:hover {
+    color: lightblue !important;
+    transition: transform 0.5s ease;
+}
+
+.nav-link:active {
+    color: lightblue !important;
+    transition: transform 0.5s ease;
+}
+
+.navbar-content {
     color: white;
-    text-decoration: #0e380f;
+}
+
+.navbar-content:hover {
+    color: lightblue !important;
+    transition: transform 0.5s ease;
+}
+
+.navbar-content:active {
+    color: lightblue !important;
     transition: transform 0.5s ease;
 }

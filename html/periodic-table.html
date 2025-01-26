@@ -7,9 +7,8 @@
     <meta name="description" content="">
     <link rel="icon" type="favicon" href="/pics/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/table-style.css">
+    <link rel="stylesheet" href="/css/periodic-table-style.css">
     <script src="../script.js"></script>
 </head>
 <body id="mainpage">
@@ -45,10 +44,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             const username = localStorage.getItem('username');
             const welcomeMessage = document.getElementById('welcomeMessage');
+            const userInfo = document.getElementById('user-info');
 
             if (username) {
                 //personalized welcome message
                 welcomeMessage.textContent = `Hello, ${username}!`;
+            } else {
+                userInfo.style.display = 'none';
             }
         });
 
