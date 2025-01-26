@@ -10,14 +10,15 @@
 The website will include the following features:
 
 1. **Homepage**
-    - periodic table
-    - field where you can enter an element, and you get the electron configuration
-    - welcome message
+    - navigation menu
+    - you can navigate to the login-, periodic table-, and electron configuration page
 
 2. **Navigation Menu**
-    - the website won't have a navigation menu
+   - periodic table
+   - electron configuration
 
 3. **Additional Pages/Sections**
+    - periodic-table.html
     - login.html
 
 ## Technologies Used
@@ -30,9 +31,11 @@ The website will include the following features:
 - ProjectDescription.md
 - index.html
 - login.html
+- periodic-table.html
 - style.css
 - index-style.css
 - login-style.css
+- periodic-table-style.css
 - script.js
 
 ## Submission Instructions
