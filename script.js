@@ -15,7 +15,7 @@ function handleLogin() {
         const logEntry = `[${timestamp}] Login attempt - ${username}`;
         console.log(logEntry); //log to console or display somewhere
 
-        //redirect to index.html
+        //redirect to periodic-table.html
         window.location.href = "periodic-table.html";
     } else {
         alert('Please enter a username.');

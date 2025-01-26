@@ -1,4 +1,4 @@
-/*index.html*/
+/*periodic-table.html*/
 
 #mainpage {
     font-family: Arial, Helvetica, sans-serif;
@@ -27,9 +27,11 @@ h1 {
         /*font-size: 40px;*/
     }
 }
+
 a:link, a:visited, a:active {
     display: block;
 }
+
 .outer-group {
     background-color: rgba(209, 255, 250, 0.59);
     border: 2px solid rgb(0, 0, 0);
@@ -230,7 +232,8 @@ a:link, a:visited, a:active {
     }
 }
 
-/*Space bar*/
+/*search bar*/
+
 .ui-input-container {
     position: relative;
     width: 300px;

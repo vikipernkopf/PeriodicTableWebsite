@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Arial Rounded MT Bold', sans-serif;
     background: #f4f4f4;
     margin: 0;
@@ -6,7 +6,7 @@ body{
     background-image: url("/pics/Car.png") !important;
 }
 
-.navbar{
+.navbar {
     background: radial-gradient(circle, cadetblue, cornflowerblue);
     padding: 5px 1px;
     font-size: 20px;
@@ -15,6 +15,7 @@ body{
 .nav-item {
     margin-right: 200px; /* Space between items */
 }
+
 .nav-link {
     text-decoration: none;
     color: black;
@@ -22,7 +23,6 @@ body{
 
 .nav-link:hover{
     color: white;
-    te
     text-decoration: #0e380f;
     transition: transform 0.5s ease;
 }
