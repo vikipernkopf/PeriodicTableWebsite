@@ -3,6 +3,7 @@ body{
     background: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-image: url("/pics/Car.png") !important;
 }
 
 .navbar{
@@ -21,6 +22,7 @@ body{
 
 .nav-link:hover{
     color: white;
-    transform: scale(1.1);
+    te
+    text-decoration: #0e380f;
     transition: transform 0.5s ease;
 }
