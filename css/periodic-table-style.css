@@ -78,7 +78,6 @@ td {
     transition: transform 0.2s ease;
 }
 
-
 #description tr td {
     min-width: 170px !important;
 }
@@ -121,54 +120,55 @@ a:link, a:visited, a:active {
     background-color: #ffe7eb;
     color: #d05c95;
     border-color: #d05c95;
+
     a:link, a:visited, a:active {
         color: #d05c95;
         display: block;
         padding: 10px 10px;
     }
-
 }
 
 .reactive-non-metal {
     background-color: #e2eeff;
     color: #407bf1;
     border-color: #407bf1;
+
     a:link, a:visited, a:active {
         color: #407bf1;
         display: block;
         padding: 10px 10px;
     }
-
 }
 
 .metalloid {
     background-color: #fef7e0;
     color: #a37933;
     border-color: #a37933;
+
     a:link, a:visited, a:active {
         color: #a37933;
         display: block;
         padding: 10px 10px;
     }
-
 }
 
 .post-transition-metal {
     background-color: #ffe6d4;
     color: #0e380f;
     border-color: #0e380f;
+
     a:link, a:visited, a:active {
         color: #0e380f;
         display: block;
         padding: 10px 10px;
     }
-
 }
 
 .transition-metal {
     background-color: #f3e8fd;
     color: #6b8cf3;
     border-color: #6b8cf3;
+
     a:link, a:visited, a:active {
         color: #6b8cf3;
         display: block;
@@ -180,6 +180,7 @@ a:link, a:visited, a:active {
     background-color: #e7e7ea;
     color: #5e586c;
     border-color: #5e586c;
+
     a:link, a:visited, a:active {
         color: #5e586c;
         display: block;
@@ -191,6 +192,7 @@ a:link, a:visited, a:active {
     background-color: #d8f8ff;
     color: #6cadb8;
     border-color: #6cadb8;
+
     a:link, a:visited, a:active {
         color: #6cadb8;
         display: block;
@@ -202,29 +204,31 @@ a:link, a:visited, a:active {
     background-color: #ffe7eb;
     color: #dd2d2e;
     border-color: #dd2d2e;
+
     a:link, a:visited, a:active {
         color: #dd2d2e;
         display: block;
         padding: 10px 10px;
     }
-
 }
 
 .lanthanide {
     background-color: #e2eeff;
     color: #2b5592;
     border-color: #2b5592;
+
     a:link, a:visited, a:active {
         color: #2b5592;
         display: block;
         padding: 10px 10px;
     }
-
 }
+
 .actinide {
     background-color: #ffe6d4;
     color: #d56235;
     border-color: #d56235;
+
     a:link, a:visited, a:active {
         color: #d56235;
         display: block;
@@ -236,11 +240,11 @@ a:link, a:visited, a:active {
 
 .ui-input-container {
     position: relative;
-    width: 300px;
+    width: auto;
 }
 
 .ui-input {
-    width: 100%;
+    width: auto;
     padding: 10px 10px 10px 40px;
     font-size: 1em;
     border: none;
