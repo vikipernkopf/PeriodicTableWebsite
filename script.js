@@ -14,7 +14,7 @@ function handleLogin() {
         const timestamp = new Date().toLocaleString();
         const logEntry = `[${timestamp}] Login attempt - ${username}`;
         console.log(logEntry); //log to console or display somewhere
-        window.location.href = "../../index.html";
+        window.location.href = "../index.html";
     } else {
         alert('Please enter a username.');
     }
