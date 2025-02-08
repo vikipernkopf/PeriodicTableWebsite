@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Periodic Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+    }
+
+    svg {
+      max-width: 90%;
+      height: auto;
+    }
+
+    .element {
+      cursor: pointer;
+      transition: transform 0.2s, fill 0.2s;
+    }
+
+    .element:hover {
+      transform: scale(1.1);
+      fill: #fff3e0;
+    }
+
+    .element rect {
+      stroke: black;
+      stroke-width: 1;
+      rx: 8;
+    }
+
+    .element text {
+      pointer-events: none;
+      text-anchor: middle;
+    }
+
+    .label {
+      font-size: 0.5em;
+    }
+
+    .symbol {
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .number {
+      font-size: 0.7em;
+    }
+
+  </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Example Elements -->
+  <!-- Hydrogen -->
+  <g class="element" transform="translate(20, 20)" onclick="showDetails('Hydrogen', 1, 'H', 'Non-metal')">
+    <rect width="60" height="70" fill="#bbdefb" />
+    <text class="number" x="30" y="15">1</text>
+    <text class="symbol" x="30" y="45">H</text>
+  </g>
+
+  <!-- Helium -->
+  <g class="element" transform="translate(920, 20)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+
+  <g class="element" transform="translate(20, 100)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+
+  <g class="element" transform="translate(20, 180)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+
+  <g class="element" transform="translate(20, 260)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+
+  <g class="element" transform="translate(20, 340)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+
+  <g class="element" transform="translate(20, 420)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g> <!-- add 80 to x coordinate to get same distance vertically -->
+
+  <g class="element" transform="translate(20, 500)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+
+
+  <g class="element" transform="translate(100, 100)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+  <g class="element" transform="translate(100, 180)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+  <rect width="60" height="70" fill="#f8bbd0" />
+  <text class="number" x="30" y="15">2</text>
+  <text class="symbol" x="30" y="45">He</text>
+</g>
+  <g class="element" transform="translate(100, 260)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+  <rect width="60" height="70" fill="#f8bbd0" />
+  <text class="number" x="30" y="15">2</text>
+  <text class="symbol" x="30" y="45">He</text>
+</g>
+  <g class="element" transform="translate(100, 340)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+  <g class="element" transform="translate(100, 420)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+
+  <g class="element" transform="translate(100, 500)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+    <rect width="60" height="70" fill="#f8bbd0" />
+    <text class="number" x="30" y="15">2</text>
+    <text class="symbol" x="30" y="45">He</text>
+  </g>
+  <!-- Add more elements here following the pattern -->
+</svg>
+
+<script>
+  function showDetails(name, number, symbol, group) {
+    alert(`Element: ${name}\nAtomic Number: ${number}\nSymbol: ${symbol}\nGroup: ${group}`);
+  }
+</script>
+</body>
+</html>

@@ -62,7 +62,31 @@
             window.location.href = 'login.html';
         });
     </script>
-    <table class="outer-group">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+        <!-- Example Elements -->
+        <!-- Hydrogen -->
+        <g class="element" transform="translate(20, 20)" onclick="showDetails('Hydrogen', 1, 'H', 'Non-metal')">
+            <rect width="65" height="65" fill="#bbdefb" rx = "5" />
+            <text class="number" text-anchor="middle" x="30" y="15">1</text>
+            <text class="symbol" text-anchor="middle" x="30" y="45">H</text>
+        </g>
+
+        <!-- Helium -->
+        <g class="element" transform="translate(920, 20)" onclick="showDetails('Helium', 2, 'He', 'Noble Gas')">
+            <rect width="60" height="80" fill="#f8bbd0" />
+            <text class="number" x="30" y="15">2</text>
+            <text class="symbol" x="30" y="45">He</text>
+        </g>
+
+        <!-- Add more elements here following the pattern -->
+    </svg>
+
+    <script>
+        function showDetails(name, number, symbol, group) {
+            alert(`Element: ${name}\nAtomic Number: ${number}\nSymbol: ${symbol}\nGroup: ${group}`);
+        }
+    </script>
+    <!-- <table class="outer-group">
         <tr>
             <th class="invisible"></th>
             <th>1</th>
@@ -283,7 +307,8 @@
             <td class="actinide"><a target="blank" href="https://en.wikipedia.org/wiki/Actinide" title="Actinides">Actinides</a></td>
             <td class="unknown-properties"><a target="blank" href="https://westportlibrary.libguides.com/Elements/UnknownProperties" title="Unknown properties">Unknown properties</a></td>
         </tr>
-    </table>
+    </table> -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
