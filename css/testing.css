@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+}
+
+svg {
+    max-width: 90%;
+    height: auto;
+}
+
+.element {
+    cursor: pointer;
+    transition: transform 0.2s, fill 0.2s;
+}
+
+.element:hover {
+    fill: #fff3e0;
+}
+
+.element rect {
+    stroke: black;
+    stroke-width: 1;
+    rx: 8;
+}
+
+.element text {
+    pointer-events: none;
+    text-anchor: middle;
+}
+
+.label {
+    font-size: 0.5em;
+}
+
+.symbol {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 0.7em;
+}
