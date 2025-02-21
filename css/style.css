@@ -42,9 +42,13 @@ button:hover {
     justify-content: space-between;
 }
 
+.navbar-logo {
+    margin-right: 5px;
+}
+
 .navbar-nav {
     display: flex;
-    gap: 20px;
+    gap: 0;
 }
 
 .nav-item {
