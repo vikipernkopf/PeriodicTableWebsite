@@ -12,6 +12,7 @@
     <script src="../script.js"></script>
 </head>
 <body id="mainpage">
+
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="container-fluid">
@@ -161,7 +162,6 @@
             const userInfo = document.getElementById('user-info');
 
             if (username) {
-                //personalized welcome message
                 welcomeMessage.textContent = `Hello, ${username}!`;
             } else {
                 userInfo.style.display = 'none';

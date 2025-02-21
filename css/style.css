@@ -71,7 +71,50 @@ button:hover {
     color: white;
 }
 
-/*theme popup*/
+.navbar {
+    background: #333;
+    padding: 5px 1px;
+    font-size: 20px;
+}
+
+.nav-item {
+    margin-right: 0; /*space between items*/
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link:hover {
+    color: lightblue !important;
+    transition: transform 0.5s ease;
+}
+
+.nav-link:active {
+    color: lightblue !important;
+    transition: transform 0.5s ease;
+}
+
+.navbar-content {
+    color: white;
+    white-space: nowrap;
+}
+
+.navbar-content:hover {
+    color: lightblue !important;
+    transition: transform 0.5s ease;
+}
+
+.navbar-content:active {
+    color: lightblue !important;
+    transition: transform 0.5s ease;
+}
+#navbarNavDropdown{
+    color: white;
+}
+
+/* radio settings 👇 */
 
 .theme-popup {
     /*total*/
