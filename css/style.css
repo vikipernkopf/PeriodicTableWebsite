@@ -1,9 +1,8 @@
 /*general*/
-/*test*/
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /*button*/
@@ -31,10 +30,25 @@ button:hover {
     background: #333;
     padding: 5px 1px;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
 }
 
 .nav-item {
-    margin-right: 0; /*space between items*/
+    list-style: none;
 }
 
 .nav-link {
@@ -55,6 +69,8 @@ button:hover {
 .navbar-content {
     color: white;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-content:hover {
@@ -67,50 +83,7 @@ button:hover {
     transition: transform 0.5s ease;
 }
 
-#navbarNavDropdown{
-    color: white;
-}
-
-.navbar {
-    background: #333;
-    padding: 5px 1px;
-    font-size: 20px;
-}
-
-.nav-item {
-    margin-right: 0; /*space between items*/
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-}
-
-.nav-link:hover {
-    color: lightblue !important;
-    transition: transform 0.5s ease;
-}
-
-.nav-link:active {
-    color: lightblue !important;
-    transition: transform 0.5s ease;
-}
-
-.navbar-content {
-    color: white;
-    white-space: nowrap;
-}
-
-.navbar-content:hover {
-    color: lightblue !important;
-    transition: transform 0.5s ease;
-}
-
-.navbar-content:active {
-    color: lightblue !important;
-    transition: transform 0.5s ease;
-}
-#navbarNavDropdown{
+#navbar-nav-dropdown{
     color: white;
 }
 
