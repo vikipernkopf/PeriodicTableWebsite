@@ -19,3 +19,12 @@ function handleLogin() {
         alert('Please enter a username.');
     }
 }
+
+
+fetch('data/yourfile.txt')
+    .then(response => response.text())
+    .then(data => {
+        const lines = data.split('\n'); // Split the content by new lines
+        console.log(lines); // Output the array to the console
+    })
+    .catch(error => console.error('Error reading the file:', error));
