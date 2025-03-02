@@ -72,6 +72,11 @@ async function searchElement() {
 
     let found = elements[query];
 
+    if (query === ""){
+        resultDiv.style.display = "none";
+    }
+
+    resultDiv.style.display = found ? "block" : "none";
     resultDiv.innerHTML = found
         ? `<strong>${query}:</strong> ${found}`
         : "Element not found.";

@@ -55,6 +55,12 @@ a:link, a:visited, a:active {
     margin-left: 10px;
 }
 
+#result{
+    
+    border: black 1px solid;
+    padding: 5px;
+    background: white;
+}
 /*table*/
 
 table, tr, td {
