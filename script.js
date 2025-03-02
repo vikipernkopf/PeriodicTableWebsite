@@ -4,6 +4,7 @@ function handleLogin() {
 
     if (username.length > maxLength) {
         alert(`Username must be ${maxLength} characters or less.`);
+
         return;
     }
 
@@ -42,10 +43,11 @@ document.getElementById('logout-button').addEventListener('click', function () {
 
 
 async function loadData() {
-    const response = await fetch("/data/electron-config.txt");
+    const response = await fetch("../data/electron-config.txt");
     const text = await response.text();
 
     let elements = {};
+
     text.split("\n").forEach(line => {
         let parts = line.split(":"); // Split at colon
         if (parts.length < 2) return; // Skip invalid lines
