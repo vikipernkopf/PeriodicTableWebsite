@@ -57,7 +57,8 @@ a:link, a:visited, a:active {
 
 #result{
     
-    border: black 1px solid;
+    border: #6c63ff 3px solid;
+    border-radius: 2px;
     padding: 5px;
     background: white;
 }
