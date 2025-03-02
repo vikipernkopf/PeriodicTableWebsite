@@ -247,7 +247,7 @@ a:link, a:visited, a:active {
 #result{
     border: #6c63ff 3px solid;
     border-radius: 2px;
-    padding: 5px;
+    padding: 10px;
     background: white;
     display: none;
 }
@@ -255,6 +255,8 @@ a:link, a:visited, a:active {
 .ui-input-container {
     position: relative;
     width: auto;
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
 }
 
 .ui-input {
