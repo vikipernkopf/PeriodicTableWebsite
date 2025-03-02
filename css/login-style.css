@@ -63,12 +63,13 @@ h2 {
 
 /*form*/
 
-.form-group {
+#form-group {
     margin-bottom: 20px;
     position: relative;
+    display: flex;
 }
 
-.form-group svg {
+#form-group svg {
     position: absolute;
     left: 12px;
     top: 50%;
