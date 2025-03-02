@@ -20,11 +20,62 @@ function handleLogin() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const username = localStorage.getItem('username');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    const userInfo = document.getElementById('user-info');
 
-fetch('data/yourfile.txt')
-    .then(response => response.text())
-    .then(data => {
-        const lines = data.split('\n'); // Split the content by new lines
-        console.log(lines); // Output the array to the console
-    })
-    .catch(error => console.error('Error reading the file:', error));
+    if (username) {
+        welcomeMessage.textContent = `Hello, ${username}!`;
+    } else {
+        userInfo.style.display = 'none';
+    }
+});
+
+document.getElementById('logout-button').addEventListener('click', function () {
+    //remove username from local storage
+    localStorage.removeItem('username');
+
+    //redirect to login page
+    window.location.href = 'login.html';
+});
+
+
+async function loadData() {
+    const response = await fetch("/data/electron-config.txt");
+    const text = await response.text();
+
+    let elements = {};
+    text.split("\n").forEach(line => {
+        let parts = line.split(":"); // Split at colon
+        if (parts.length < 2) return; // Skip invalid lines
+
+        let nameParts = parts[0].trim().split(" "); // Split atomic number, symbol, and name
+        let symbol = nameParts[1].toLowerCase(); // Element symbol
+        let fullName = nameParts.slice(2).join(" ").toLowerCase(); // Full element name
+        let config = parts[1].trim(); // Electron config
+
+        // Store both symbol and full name for lookup
+        elements[symbol] = config;
+        elements[fullName] = config;
+    });
+
+    return elements;
+}
+
+// Search function
+async function searchElement() {
+    let elements = await loadData();
+    let inputField = document.querySelector(".ui-input");
+    let query = inputField.value.trim().toLowerCase();
+    let resultDiv = document.getElementById("result");
+
+    let found = elements[query];
+
+    resultDiv.innerHTML = found
+        ? `<strong>${query}:</strong> ${found}`
+        : "Element not found.";
+}
+
+// Attach event listener
+document.querySelector(".ui-input").addEventListener("input", searchElement);
