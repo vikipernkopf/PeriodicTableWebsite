@@ -8,16 +8,19 @@ async function loadData() {
 
     text.split("\n").forEach(line => {
         let parts = line.split(":"); // Split at colon
-        if (parts.length < 2) return; // Skip invalid lines
+
+        if (parts.length < 2) { // Skip invalid lines
+            return;
+        }
 
         let nameParts = parts[0].trim().split(" "); // Split atomic number, symbol, and name
-        let symbol = nameParts[1].toLowerCase(); // Element symbol
+        let symbol = nameParts[1]; // Element symbol
         let fullName = nameParts.slice(2).join(" ").toLowerCase(); // Full element name
         let config = parts[1].trim(); // Electron config
 
         // Store both symbol and full name for lookup
-        elements[symbol] = config;
-        elements[fullName] = config;
+        elements[symbol] = `${symbol} ${config}`;
+        elements[fullName] = `${symbol} ${config}`;
     });
 
     return elements;
