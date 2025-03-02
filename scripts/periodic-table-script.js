@@ -1,46 +1,4 @@
-function handleLogin() {
-    const username = document.getElementById('username').value.trim();
-    const maxLength = 20;
-
-    if (username.length > maxLength) {
-        alert(`Username must be ${maxLength} characters or less.`);
-
-        return;
-    }
-
-    if (username) {
-        //save the username in local storage
-        localStorage.setItem('username', username);
-
-        const timestamp = new Date().toLocaleString();
-        const logEntry = `[${timestamp}] Login attempt - ${username}`;
-        console.log(logEntry); //log to console or display somewhere
-        window.location.href = "../index.html";
-    } else {
-        alert('Please enter a username.');
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    const username = localStorage.getItem('username');
-    const welcomeMessage = document.getElementById('welcomeMessage');
-    const userInfo = document.getElementById('user-info');
-
-    if (username) {
-        welcomeMessage.textContent = `Hello, ${username}!`;
-    } else {
-        userInfo.style.display = 'none';
-    }
-});
-
-document.getElementById('logout-button').addEventListener('click', function () {
-    //remove username from local storage
-    localStorage.removeItem('username');
-
-    //redirect to login page
-    window.location.href = 'login.html';
-});
-
+/*electron configuration*/
 
 async function loadData() {
     const response = await fetch("../data/electron-config.txt");
@@ -65,7 +23,6 @@ async function loadData() {
     return elements;
 }
 
-// Search function
 async function searchElement() {
     let elements = await loadData();
     let inputField = document.querySelector(".ui-input");
@@ -85,5 +42,26 @@ async function searchElement() {
         : "Element not found.";
 }
 
-// Attach event listener
 document.querySelector(".ui-input").addEventListener("input", searchElement);
+
+/*login*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const username = localStorage.getItem('username');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    const userInfo = document.getElementById('user-info');
+
+    if (username) {
+        welcomeMessage.textContent = `Hello, ${username}!`;
+    } else {
+        userInfo.style.display = 'none';
+    }
+});
+
+document.getElementById('logout-button').addEventListener('click', function () {
+    //remove username from local storage
+    localStorage.removeItem('username');
+
+    //redirect to login page
+    window.location.href = 'login.html';
+});

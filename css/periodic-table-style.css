@@ -1,6 +1,6 @@
 /*periodic-table.html*/
 
-#mainpage {
+body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
     background-image: linear-gradient(to bottom, #7abbe3, #ffffff, #7abbe3);
@@ -53,14 +53,6 @@ a:link, a:visited, a:active {
 
 #logout-button {
     margin-left: 10px;
-}
-
-#result{
-    border: #6c63ff 3px solid;
-    border-radius: 2px;
-    padding: 5px;
-    background: white;
-    display: none;
 }
 
 /*table*/
@@ -251,6 +243,14 @@ a:link, a:visited, a:active {
 }
 
 /*search bar*/
+
+#result{
+    border: #6c63ff 3px solid;
+    border-radius: 2px;
+    padding: 5px;
+    background: white;
+    display: none;
+}
 
 .ui-input-container {
     position: relative;
