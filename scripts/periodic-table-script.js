@@ -34,31 +34,45 @@ async function searchElement() {
 
     if (query === ""){
         resultDiv.style.display = "none";
+        resetElementStyles();
+
+        return;
     }
 
     resultDiv.style.display = found ? "block" : "none";
+
     if (found) {
         resultDiv.innerHTML = `<strong>${input}:</strong> ${found}`;
-        highlightElement(input);
+        highlightElement(query);
     } else {
         resultDiv.innerHTML = "Element not found.";
     }
-    
 }
 
 function highlightElement(input) {
-    const classes = ['alkali-metal', 'transition-metal', 'post-transition-metal', 'metalloid', 'noble-gas', 'reactive-non-metal'];
+    const classes = [
+        'alkali-metal',
+        'transition-metal',
+        'post-transition-metal',
+        'metalloid',
+        'noble-gas',
+        'reactive-non-metal',
+        'lanthanide',
+        'unknown-properties',
+        'alkaline-earth-metal',
+        'actinide'
+    ];
+
     const tds = document.querySelectorAll('td');
 
     tds.forEach(td => {
-        const link = td.querySelector(query);
+        const link = td.querySelector('a');
+
         if (link && classes.some(className => td.classList.contains(className)) && link.textContent.toLowerCase() === (input.toLowerCase())) {
             td.style.transform = 'scale(1.1)';
             td.style.zIndex = '1';
             td.style.boxShadow = '0 0 10px 5px rgba(0, 0, 0, 0.5)';
-        }
-        else
-        {
+        } else {
             td.style.backgroundColor = '';
             td.style.transform = '';
             td.style.zIndex = '';
@@ -68,6 +82,16 @@ function highlightElement(input) {
 }
 
 document.querySelector(".ui-input").addEventListener("input", searchElement);
+
+function resetElementStyles() {
+    const tds = document.querySelectorAll('td');
+
+    tds.forEach(td => {
+        td.style.transform = '';
+        td.style.zIndex = '';
+        td.style.boxShadow = '';
+    });
+}
 
 /*login*/
 
