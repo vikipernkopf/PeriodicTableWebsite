@@ -69,7 +69,8 @@ async function loadData() {
 async function searchElement() {
     let elements = await loadData();
     let inputField = document.querySelector(".ui-input");
-    let query = inputField.value.trim().toLowerCase();
+    let input = inputField.value.trim();
+    let query = input.toLowerCase();
     let resultDiv = document.getElementById("result");
 
     let found = elements[query];
@@ -80,7 +81,7 @@ async function searchElement() {
 
     resultDiv.style.display = found ? "block" : "none";
     resultDiv.innerHTML = found
-        ? `<strong>${query}:</strong> ${found}`
+        ? `<strong>${input}:</strong> ${found}`
         : "Element not found.";
 }
 
