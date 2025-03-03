@@ -94,7 +94,7 @@
 94 Pu plutonium : [Rn] 5f⁶ 7s²
 95 Am americium : [Rn] 5f⁷ ⁷s²
 96 Cm curium : [Rn] 5f⁷ 6d¹ ⁷s²
-97 Bk berkelium : [Rn] 5f9 7s²
+97 Bk berkelium : [Rn] 5f⁹ 7s²
 98 Cf californium : [Rn] 5f¹⁰ 7s²
 99 Es einsteinium : [Rn] 5f¹¹ 7s²
 100 Fm fermium : [Rn] 5f¹² 7s²
