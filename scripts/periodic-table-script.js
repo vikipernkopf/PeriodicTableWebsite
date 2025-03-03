@@ -14,13 +14,13 @@ async function loadData() {
         }
 
         let nameParts = parts[0].trim().split(" "); // Split atomic number, symbol, and name
-        let symbol = nameParts[1].toLowerCase(); // Element symbol
-        let fullName = nameParts.slice(2).join(" ").toLowerCase(); // Full element name
+        let symbol = nameParts[1]; // Element symbol
+        let fullName = nameParts.slice(2).join(" "); // Full element name
         let config = parts[1].trim(); // Electron config
 
         // Store both symbol and full name for lookup
-        elements[symbol] = `${symbol} ${config}`;
-        elements[fullName] = `${symbol} ${config}`;
+        elements[symbol.toLowerCase()] = `${symbol} ${config}`;
+        elements[fullName.toLowerCase()] = `${symbol} ${config}`;
     });
 
     return elements;
