@@ -14,7 +14,7 @@ async function loadData() {
         }
 
         let nameParts = parts[0].trim().split(" "); // Split atomic number, symbol, and name
-        let symbol = nameParts[1]; // Element symbol
+        let symbol = nameParts[1].toLowerCase(); // Element symbol
         let fullName = nameParts.slice(2).join(" ").toLowerCase(); // Full element name
         let config = parts[1].trim(); // Electron config
 
@@ -33,20 +33,23 @@ async function searchElement() {
     let query = input.toLowerCase();
     let resultDiv = document.getElementById("result");
 
-    let found = elements[query];
+    let foundString = elements[query];
 
-    if (query === ""){
+    if (query === "" || !foundString) {
         resultDiv.style.display = "none";
         resetElementStyles();
 
         return;
     }
 
+    let found = foundString.split(" ")[1];
+    let element = foundString.split(" ")[0];
+
     resultDiv.style.display = found ? "block" : "none";
 
     if (found) {
         resultDiv.innerHTML = `<strong>${input}:</strong> ${found}`;
-        highlightElement(query);
+        highlightElement(element);
     } else {
         resultDiv.innerHTML = "Element not found.";
     }
