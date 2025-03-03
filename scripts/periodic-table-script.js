@@ -48,7 +48,7 @@ async function searchElement() {
     resultDiv.style.display = found ? "block" : "none";
 
     if (found) {
-        resultDiv.innerHTML = `<strong>${input}:</strong> ${found}`;
+        resultDiv.innerHTML = `<strong>${element}:</strong> ${found}`;
         highlightElement(element);
     } else {
         resultDiv.innerHTML = "Element not found.";
