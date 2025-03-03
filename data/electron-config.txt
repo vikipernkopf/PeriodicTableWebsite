@@ -1,4 +1,4 @@
-1 H Hydrogen : 1s¹
+1 H hydrogen : 1s¹
 2 He helium : 1s²
 3 Li lithium : [He] 2s¹
 4 Be beryllium : [He] 2s²
@@ -23,9 +23,9 @@
 23 V vanadium : [Ar] 3d³ 4s²
 24 Cr chromium : [Ar] 3d⁵ 4s¹
 25 Mn manganese : [Ar] 3d⁵ 4s²
-26 Fe iron : [Ar] 3d6 4s²
+26 Fe iron : [Ar] 3d⁶ 4s²
 27 Co cobalt : [Ar] 3d⁷ 4s²
-28 Ni nickel : [Ar] 3d8 4s²
+28 Ni nickel : [Ar] 3d⁸ 4s²
 29 Cu copper : [Ar] 3d¹⁰ 4s¹
 30 Zn zinc : [Ar] 3d¹⁰ 4s²
 31 Ga gallium : [Ar] 3d¹⁰ 4s² 4p¹
@@ -59,10 +59,10 @@
 59 Pr praseodymium : [Xe] 4f³ 6s²
 60 Nd neodymium : [Xe] 4f⁴ 6s²
 61 Pm promethium : [Xe] 4f⁵ 6s²
-62 Sm samarium : [Xe] 4f6 6s²
+62 Sm samarium : [Xe] 4f⁶ 6s²
 63 Eu europium : [Xe] 4f⁷ 6s²
 64 Gd gadolinium : [Xe] 4f⁷ 5d¹ 6s²
-65 Tb terbium : [Xe] 4f9 6s²
+65 Tb terbium : [Xe] 4f⁹ 6s²
 66 Dy dysprosium : [Xe] 4f¹⁰ 6s²
 67 Ho holmium : [Xe] 4f¹¹ 6s²
 68 Er erbium : [Xe] 4f¹² 6s²
@@ -92,8 +92,8 @@
 92 U uranium : [Rn] 5f³ 6d¹ 7s²
 93 Np neptunium : [Rn] 5f⁴ 6d¹ 7s²
 94 Pu plutonium : [Rn] 5f⁶ 7s²
-95 Am americium : [Rn] 5f⁷ ⁷s²
-96 Cm curium : [Rn] 5f⁷ 6d¹ ⁷s²
+95 Am americium : [Rn] 5f⁷ 7s²
+96 Cm curium : [Rn] 5f⁷ 6d¹ 7s²
 97 Bk berkelium : [Rn] 5f⁹ 7s²
 98 Cf californium : [Rn] 5f¹⁰ 7s²
 99 Es einsteinium : [Rn] 5f¹¹ 7s²
