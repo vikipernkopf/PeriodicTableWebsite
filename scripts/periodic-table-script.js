@@ -19,8 +19,8 @@ async function loadData() {
         let config = parts[1].trim(); // Electron config
 
         // Store both symbol and full name for lookup
-        elements[symbol.toLowerCase()] = `${symbol} ${config}`;
-        elements[fullName.toLowerCase()] = `${symbol} ${config}`;
+        elements[symbol.toLowerCase()] = `${symbol}-${config}`;
+        elements[fullName.toLowerCase()] = `${symbol}-${config}`;
     });
 
     return elements;
@@ -42,13 +42,13 @@ async function searchElement() {
         return;
     }
 
-    let found = foundString.split(" ")[1];
-    let element = foundString.split(" ")[0];
+    let found = foundString.split("-")[1];
+    let element = foundString.split("-")[0];
 
     resultDiv.style.display = found ? "block" : "none";
 
     if (found) {
-        resultDiv.innerHTML = `<strong>${input}:</strong> ${found}`;
+        resultDiv.innerHTML = `<strong>${element}:</strong> ${found}`;
         highlightElement(element);
     } else {
         resultDiv.innerHTML = "Element not found.";
