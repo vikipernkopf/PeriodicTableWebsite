@@ -3,7 +3,7 @@
 #login-page {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    background: linear-gradient(135deg, #000000, #2c4293, #000000);
+    background-image: linear-gradient(to bottom, #7abbe3, #ffffff, #7abbe3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,16 +13,16 @@
 .container {
     width: 100%;
     max-width: 420px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 32px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    color: white;
+    color: #000000;
     text-align: center;
     margin-bottom: 8px;
     font-size: 24px;
@@ -38,14 +38,14 @@ h2 {
 .logo {
     width: 80px;
     height: 80px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     margin: 0 auto 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .logo::after {
@@ -76,7 +76,7 @@ h2 {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 /*input*/
@@ -87,17 +87,17 @@ input {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    color: white;
+    color: #000000;
     font-size: 16px;
     transition: all 0.3s ease;
 }
 
 input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 input:focus {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.15);
 }
