@@ -27,8 +27,9 @@ button:hover {
 /*navbar settings*/
 
 .navbar {
-    background: #333;
-    padding: 5px 1px;
+    background: #D8ECF7;
+    /*background: #333;*/
+    padding: 15px 20px;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
@@ -75,14 +76,14 @@ button:hover {
 }
 
 .navbar-content {
-    color: white;
+    color: #000000;
     white-space: nowrap;
     display: flex;
     align-items: center;
 }
 
 .navbar-content:hover {
-    color: lightblue !important;
+    color: #415359 !important;
     transition: transform 0.5s ease;
 }
 
@@ -99,11 +100,12 @@ button:hover {
 
 .theme-popup {
     /*total*/
-    --total_text_color: #e0e0e0;
+    --total_text_color: #202020;
     --total_font_family: Menlo, Roboto Mono, monospace;
 
     /*button*/
-    --btn_bg: #333;
+    --btn_bg: #D8ECF7;
+    /*--btn_bg: #333;*/
     --btn_padding: 0.5em;
     --btn_height: 2em;
     --btn_border_radius: 0.3125em;
@@ -117,13 +119,13 @@ button:hover {
     --list_bg: var(--btn_bg);
     --list_border_radius: var(--btn_border_radius);
     --list_gap: 0.1875em;
-    --list_btn_hover_bg: #5A5656;
-    --list_btn_active: #b9b9b970;
+    --list_btn_hover_bg: #FFF6F670;
+    --list_btn_active: rgba(255, 246, 246, 0.44);
     --list_btn_border_radius: 0.25em;
     --list_btn_padding: 0.35em 1em;
     --list_btn_gap: 0.4375em;
     --list_btn_outline_width: 0.0625em;
-    --list_btn_outline_color: rgb(212, 210, 210);
+    --list_btn_outline_color: rgb(0, 0, 0);
     --list_offset: 0.35em;
     --list_btn_font_size: 14px;
     --list_position_left: unset;
