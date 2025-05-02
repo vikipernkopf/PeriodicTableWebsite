@@ -2,11 +2,17 @@
 
 async function loadData() {
     try {
-        return await loadFromServer() || await loadFromFile();
-    } catch (error) {
-        console.error("Failed to load data from both server and local file:", error);
+        return await loadFromServer();
+    } catch (serverError) {
+        console.error("Failed to load data from server:", serverError);
 
-        return {};
+        try {
+            return await loadFromFile();
+        } catch (fileError) {
+            console.error("Failed to load data from local file:", fileError);
+
+            return {};
+        }
     }
 }
 
