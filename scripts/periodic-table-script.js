@@ -1,46 +1,66 @@
 /*electron configuration*/
 
 async function loadData() {
-    let elements = {};
-
     try {
-        const response = await fetch("http://localhost:3000/elements"); //local json-server
-        const data = await response.text();
+        return await loadFromServer() || await loadFromFile();
+    } catch (error) {
+        console.error("Failed to load data from both server and local file:", error);
 
-        data.forEach(element => {
+        return {};
+    }
+}
+
+async function loadFromServer() {
+    const response = await fetch("http://localhost:3000/elements");
+
+    if (!response.ok) {
+        throw new Error('Server response was not ok');
+    }
+
+    const data = await response.json();
+
+    //handle both possible data structures (array or object with elements property)
+    const elementsArray = !Array.isArray(data) ? (data?.elements ?? []) : data;
+
+    if (!elementsArray || elementsArray.length === 0) {
+        throw new Error('No elements data received from server');
+    }
+
+    return processElements(elementsArray);
+}
+
+async function loadFromFile() {
+    const response = await fetch("../data/elements.json");
+
+    if (!response.ok) {
+        throw new Error('Failed to load local file');
+    }
+
+    const data = await response.json();
+
+    if (!data?.elements || !Array.isArray(data.elements) || data.elements.length === 0) {
+        throw new Error('Invalid or empty data format in local file');
+    }
+
+    return processElements(data.elements);
+}
+
+function processElements(elementsArray) {
+    const elements = {};
+
+    elementsArray.forEach(element => {
+        if (element?.name && element?.symbol && element?.electronConfiguration) {
             const symbol = element.symbol;
             const config = element.electronConfiguration;
             const name = element.name;
 
-            //store both symbol and full name for lookup
-            elements[symbol.toLowerCase()] = `${symbol}-${config}`;
-            elements[name.toLowerCase()] = `${symbol}-${config}`;
-        });
-
-        return elements;
-    } catch (error) {
-        console.error("Failed to fetch from server, falling back to local file:", error);
-
-        try {
-            const response = await fetch("../data/elements.json");
-            const data = await response.json();
-            
-            data.elements.forEach(element => {
-                const symbol = element.symbol;
-                const config = element.electronConfiguration;
-                const name = element.name;
-
+            if (config) {
                 // Store both symbol and full name for lookup
                 elements[symbol.toLowerCase()] = `${symbol}-${config}`;
                 elements[name.toLowerCase()] = `${symbol}-${config}`;
-            });
-
-        } catch (error) {
-            console.error("Failed to load data from both server and local file:", error);
-            
-            return {};
+            }
         }
-    }
+    });
 
     return elements;
 }
