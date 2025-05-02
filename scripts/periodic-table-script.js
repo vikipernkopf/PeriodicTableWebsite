@@ -219,5 +219,5 @@ document.getElementById('logout-button').addEventListener('click', function () {
     localStorage.removeItem('username');
 
     //redirect to login page
-    window.location.href = 'login.html';
+    window.location.href = 'periodic-table.html';
 });
