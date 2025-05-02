@@ -96,6 +96,11 @@ button:hover {
     color: white;
 }
 
+.navbar-highlighted {
+    color: #415359;
+    font-weight: bold;
+}
+
 /* radio settings 👇 */
 
 .theme-popup {
