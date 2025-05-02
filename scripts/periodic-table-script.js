@@ -1,27 +1,46 @@
 /*electron configuration*/
 
 async function loadData() {
-    const response = await fetch("../data/electron-config.txt");
-    const text = await response.text();
-
     let elements = {};
 
-    text.split("\n").forEach(line => {
-        let parts = line.split(":"); // Split at colon
+    try {
+        const response = await fetch("http://localhost:3000/elements"); //local json-server
+        const data = await response.text();
 
-        if (parts.length < 2) { // Skip invalid lines
-            return;
+        data.forEach(element => {
+            const symbol = element.symbol;
+            const config = element.electronConfiguration;
+            const name = element.name;
+
+            //store both symbol and full name for lookup
+            elements[symbol.toLowerCase()] = `${symbol}-${config}`;
+            elements[name.toLowerCase()] = `${symbol}-${config}`;
+        });
+
+        return elements;
+    } catch (error) {
+        console.error("Failed to fetch from server, falling back to local file:", error);
+
+        try {
+            const response = await fetch("../data/elements.json");
+            const data = await response.json();
+            
+            data.elements.forEach(element => {
+                const symbol = element.symbol;
+                const config = element.electronConfiguration;
+                const name = element.name;
+
+                // Store both symbol and full name for lookup
+                elements[symbol.toLowerCase()] = `${symbol}-${config}`;
+                elements[name.toLowerCase()] = `${symbol}-${config}`;
+            });
+
+        } catch (error) {
+            console.error("Failed to load data from both server and local file:", error);
+            
+            return {};
         }
-
-        let nameParts = parts[0].trim().split(" "); // Split atomic number, symbol, and name
-        let symbol = nameParts[1]; // Element symbol
-        let fullName = nameParts.slice(2).join(" "); // Full element name
-        let config = parts[1].trim(); // Electron config
-
-        // Store both symbol and full name for lookup
-        elements[symbol.toLowerCase()] = `${symbol}-${config}`;
-        elements[fullName.toLowerCase()] = `${symbol}-${config}`;
-    });
+    }
 
     return elements;
 }
