@@ -66,31 +66,87 @@ function processElements(elementsArray) {
 }
 
 async function searchElement() {
-    let elements = await loadData();
     let inputField = document.querySelector(".ui-input");
     let input = inputField.value.trim();
-    let query = input.toLowerCase();
     let resultDiv = document.getElementById("result");
 
-    let foundString = elements[query];
-
-    if (query === "" || !foundString) {
+    if (input === "") {
         resultDiv.style.display = "none";
         resetElementStyles();
 
         return;
     }
 
-    let found = foundString.split("-")[1];
-    let element = foundString.split("-")[0];
+    const atomicNumber = parseInt(input);
 
-    resultDiv.style.display = found ? "block" : "none";
+    if (!isNaN(atomicNumber) && atomicNumber > 0 && atomicNumber <= 118) {
+        try {
+            const apiResponse = await fetch(`https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/element/${atomicNumber}/JSON/`);
 
-    if (found) {
-        resultDiv.innerHTML = `<strong>${element}:</strong> ${found}`;
-        highlightElement(element);
+            if (!apiResponse.ok) {
+                console.error(`API Error: ${apiResponse.status} - ${apiResponse.statusText}`);
+                resultDiv.style.display = "block";
+                resultDiv.innerHTML = "Error fetching element data from the API.";
+
+                resetElementStyles();
+
+                return;
+            }
+
+            const data = await apiResponse.json();
+            const name = data.Record.RecordTitle;
+
+            const elements = await loadData();
+            const foundString = elements[name.toLowerCase()];
+
+            if (foundString) {
+                const found = foundString.split("-")[1];
+                const element = foundString.split("-")[0];
+
+                resultDiv.style.display = "block";
+                resultDiv.innerHTML = `<strong>${element}:</strong> ${found}`;
+
+                highlightElement(element);
+            } else {
+                resultDiv.style.display = "block";
+                resultDiv.innerHTML = "Element configuration not found.";
+
+                resetElementStyles();
+            }
+        } catch (error) {
+            console.error("Error fetching element data:", error);
+            resultDiv.style.display = "block";
+            resultDiv.innerHTML = "Error fetching element data.";
+
+            resetElementStyles();
+        }
     } else {
-        resultDiv.innerHTML = "Element not found.";
+        //if the input isn't a number, check if it's a symbol or name
+        const elements = await loadData();
+        const query = input.toLowerCase();
+        const foundString = elements[query];
+
+        if (!foundString) {
+            resultDiv.style.display = "none";
+            resetElementStyles();
+
+            return;
+        }
+
+        const found = foundString.split("-")[1];
+        const element = foundString.split("-")[0];
+
+        resultDiv.style.display = "block";
+
+        if (found) {
+            resultDiv.innerHTML = `<strong>${element}:</strong> ${found}`;
+
+            highlightElement(element);
+        } else {
+            resultDiv.innerHTML = "Element not found.";
+
+            resetElementStyles();
+        }
     }
 }
 
