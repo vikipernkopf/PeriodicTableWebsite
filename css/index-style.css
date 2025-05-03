@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /*background-image: linear-gradient(-50deg, #7abbe3, #ffffff, #7abbe3);*/
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(77, 106, 103, 0.59);
 }
 
 .full-page-background {
@@ -12,10 +12,22 @@ body {
     left: 0;
     width: 100%;
     height: 100vh; /* Full viewport height */
+    z-index: -1; /* Places it behind other content */
+    overflow: hidden;
+}
+
+.full-page-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('/pics/lab.png'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.5; /* Adjust the opacity value as needed */
     z-index: -1; /* Places it behind other content */
 }
 /*93CCF9FF*/
@@ -35,7 +47,7 @@ body {
     border: none;
     padding: 70px 20px 1px 20px;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bolder;
 }
 
@@ -44,9 +56,10 @@ body {
     align-content: center;
     justify-content: center;
     flex-direction: column; /* Needed for vertical stacking */
-    margin: 20px auto;       /* This centers the block horizontally */
+    margin: 20px auto; /* This centers the block horizontally */
     text-align: center;
-    max-width: 700px;
+    max-width: 850px;
+    font-size: 20px;
     /*font-weight: bold;*/
 }
 
@@ -57,18 +70,40 @@ body {
     border: 2px solid rgb(34, 100, 166);
     padding: 10px;
     border-radius: 50px;
-    background: #4eb3f7;
+    background: #D8ECF7;
     font-size: 20px;
     font-weight: bolder;
     max-width: 120px;
     margin: 0 auto; /* This centers it horizontally */
     text-decoration: none; /* Remove underline */
-    color: white; /* Optional */
-    transition: 150ms;
-}
-.about:hover {
-    background: #ffffff;
-    color: #4eb3f7;
+    color: black; /* Optional */
     transition: 150ms;
 }
 
+.about:hover {
+    background: rgb(34, 100, 166);
+    color: #D8ECF7;
+    border: 2px solid #D8ECF7;
+    transition: 150ms;
+}
+
+.container {
+    position: relative; /* Ensure positioning for the pseudo-element */
+    border-radius: 50px;
+    margin: 200px;
+    padding: 20px 20px 20px 20px; /* Reduce padding to decrease space inside the container */
+    z-index: 1; /* Ensure content is above the pseudo-element */
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #c5e6f8;
+    border-radius: 50px;
+    opacity: 30%; /* Adjust the opacity value as needed */
+    z-index: -1; /* Place the pseudo-element behind the content */;
+}
