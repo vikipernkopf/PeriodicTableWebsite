@@ -31,13 +31,6 @@ body {
     z-index: -1; /* Places it behind other content */
 }
 /*93CCF9FF*/
-.text {
-    margin: 20px 20px;
-    background-color: rgba(209, 255, 250, 0.59);
-    border: 2px solid rgb(0, 0, 0);
-    padding: 20px 20px;
-    border-radius: 20px;
-}
 
 .introduction {
     display: flex;
