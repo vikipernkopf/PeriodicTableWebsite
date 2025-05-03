@@ -1,10 +1,10 @@
 /*electron configuration*/
 
 async function loadData() {
-    try {
+    /*try {
         return await loadFromServer();
     } catch (serverError) {
-        console.error("Failed to load data from server:", serverError);
+        console.error("Failed to load data from server:", serverError);*/
 
         try {
             return await loadFromFile();
@@ -13,7 +13,7 @@ async function loadData() {
 
             return {};
         }
-    }
+    //}
 }
 
 async function loadFromServer() {
@@ -36,7 +36,7 @@ async function loadFromServer() {
 }
 
 async function loadFromFile() {
-    const response = await fetch("/data/elements.json");
+    const response = await fetch("./data/elements.json");
 
     if (!response.ok) {
         throw new Error('Failed to load local file');
