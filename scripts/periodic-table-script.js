@@ -17,7 +17,7 @@ async function loadData() {
 }
 
 async function loadFromServer() {
-    const response = await fetch("http://localhost:3000/elements");
+    const response = await fetch("https://elements.black2.cf/elements");
 
     if (!response.ok) {
         throw new Error('Server response was not ok');
