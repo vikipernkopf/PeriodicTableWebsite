@@ -1,10 +1,10 @@
 /*electron configuration*/
 
 async function loadData() {
-    /*try {
+    try {
         return await loadFromServer();
     } catch (serverError) {
-        console.error("Failed to load data from server:", serverError);*/
+        console.error("Failed to load data from server:", serverError);
 
         try {
             return await loadFromFile();
@@ -13,7 +13,7 @@ async function loadData() {
 
             return {};
         }
-    //}
+    }
 }
 
 async function loadFromServer() {
