@@ -36,7 +36,7 @@ async function loadFromServer() {
 }
 
 async function loadFromFile() {
-    const response = await fetch("./data/elements.json");
+    const response = await fetch("../data/elements.json");
 
     if (!response.ok) {
         throw new Error('Failed to load local file');
