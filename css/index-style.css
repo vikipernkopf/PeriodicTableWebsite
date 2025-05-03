@@ -3,9 +3,9 @@ body {
     margin: 0;
     padding: 0;
     /*background-image: linear-gradient(-50deg, #7abbe3, #ffffff, #7abbe3);*/
-    background-color: rgb(147, 204, 249);
+    background-color: rgb(255, 255, 255);
 }
-
+/*93CCF9FF*/
 .text {
     margin: 20px 20px;
     background-color: rgba(209, 255, 250, 0.59);
@@ -13,3 +13,49 @@ body {
     padding: 20px 20px;
     border-radius: 20px;
 }
+
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px;
+    border: none;
+    padding: 70px 20px 1px 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.introtxt {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; /* Needed for vertical stacking */
+    margin: 20px auto;       /* This centers the block horizontally */
+    text-align: center;
+    max-width: 700px;
+    /*font-weight: bold;*/
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(34, 100, 166);
+    padding: 10px;
+    border-radius: 50px;
+    background: #4eb3f7;
+    font-size: 20px;
+    font-weight: bolder;
+    max-width: 120px;
+    margin: 0 auto; /* This centers it horizontally */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Optional */
+    transition: 150ms;
+}
+.about:hover {
+    background: #ffffff;
+    color: #4eb3f7;
+    transition: 150ms;
+}
+
