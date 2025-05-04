@@ -1,26 +1,27 @@
 body {
     background-color: #B9D9EB;
 }
+
 .container {
     display: flex;
-    flex-direction: row; /* Align boxes in a row */
-    justify-content: space-between; /* Distribute space between boxes */
-    align-items: flex-start; /* Align boxes at the top */
-    gap: 60px; /* Add spacing between boxes */
-    flex-wrap: nowrap; /* Allow wrapping if needed */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: nowrap;
     padding: 70px;
 }
 
 h1 {
-    text-align: center; /* Center the text horizontally */
-    margin-bottom: 10px; /* Add spacing between the title and the boxes */
+    text-align: center;
+    margin-bottom: 10px;
     margin-top: 110px;
     color: #000000;
     font-weight: bolder;
 }
 
 .box {
-    flex: 1 1 calc(33.333% - 20px); /* Keep the width settings */
+    flex: 1 1 calc(33.333% - 20px); /*keep the width settings*/
     max-width: calc(33.333% - 20px);
     box-sizing: border-box;
     background-color: #f0f0f0;
@@ -28,40 +29,41 @@ h1 {
     padding: 30px;
     margin-top: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-height: 400px; /* Set a minimum height for the boxes */
+    min-height: 400px;
     font-size: larger;
     transition: 500ms;
 }
 
 p {
-    font-size: 1.2em; /* Increase font size */
-    line-height: 1.5; /* Increase line height for better readability */
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 
-.make-big {
-    font-size: 1.5em; /* Increase font size */
-    line-height: 1.5; /* Increase line height for better readability */
+.heading {
+    font-size: 1.5em;
+    line-height: 1.5;
 }
 
-a{
+.github-image-container {
     display: flex;
-    background-color: transparent !important; /* Remove the blue background */
-    border: none !important; /* Remove any border */
-    color: inherit !important; /* Inherit text color */
-    padding: 0 !important; /* Reset padding */
-    box-shadow: none !important; /* Remove any shadow */
-    text-decoration: none !important; /* Remove underline */
+    background-color: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-.box a {
-    display: flex; /* Enable flexbox for the link */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    height: 100%; /* Ensure it takes up the full height of the box */
+.github-image-container img {
+    width: 65px;
+    height: 65px;
 }
 
 .box:hover {
-    background-color: #e0e0e0; /* Change background color on hover */
+    background-color: #e0e0e0;
     transform: scale(1.1);
     transition: 500ms;
 }
