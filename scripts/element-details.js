@@ -1,3 +1,7 @@
+/**
+ * Initializes the page by loading and displaying element details based on the URL query parameter.
+ * Fetches additional data from the PubChem API and displays it on the page.
+ */
 document.addEventListener('DOMContentLoaded', async function() {
     const urlParams = new URLSearchParams(window.location.search);
     const elementSymbol = urlParams.get('element');
@@ -95,6 +99,11 @@ async function loadFromFile() {
     return data.elements;
 }
 
+/**
+ * Displays detailed information about an element using data from the provided element object and PubChem API response.
+ * @param {Object} elementData - The element data object containing basic information (e.g., name, symbol, atomic number).
+ * @param {Object} pubchemData - The PubChem API response object containing additional element details.
+ */
 function displayElementInfo(elementData, pubchemData) {
     document.getElementById('element-name').textContent = `${elementData.name} (${elementData.symbol})`;
 
@@ -129,6 +138,10 @@ function displayElementInfo(elementData, pubchemData) {
     `;
 }
 
+/**
+ * Displays an error message inside the 'element-info' element.
+ * @param {string} message - The error message to display.
+ */
 function showError(message) {
     document.getElementById('element-info').innerHTML = `<div class="error">${message}</div>`;
 }

@@ -229,6 +229,14 @@ function resetElementStyles() {
 
 document.querySelector(".ui-input").addEventListener("input", searchElement);
 
+/*redirection*/
+
+/**
+ * Attaches click event listeners to all elements with the class 'cell'.
+ * When a cell is clicked, it prevents the default action and redirects
+ * the user to the 'element-details.html' page with the clicked element's
+ * symbol as a query parameter.
+ */
 function initializeElementClicks() {
     const elements = document.querySelectorAll('.cell');
 
@@ -241,7 +249,6 @@ function initializeElementClicks() {
     });
 }
 
-// Add this line at the end of your existing code
 document.addEventListener('DOMContentLoaded', initializeElementClicks);
 
 /*login*/
