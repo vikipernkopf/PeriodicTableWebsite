@@ -30,6 +30,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     min-height: 400px; /* Set a minimum height for the boxes */
     font-size: larger;
+    transition: 500ms;
 }
 
 p {
@@ -57,4 +58,10 @@ a{
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
     height: 100%; /* Ensure it takes up the full height of the box */
+}
+
+.box:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+    transform: scale(1.1);
+    transition: 500ms;
 }
