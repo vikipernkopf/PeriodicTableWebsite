@@ -7,16 +7,20 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;
     flex-wrap: nowrap;
-    padding: 70px;
+    padding: 0 70px;
+    gap: 50px;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 110px;
-    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px;
+    border: none;
+    padding: 70px 20px 1px 20px;
+    border-radius: 20px;
+    font-size: 45px;
     font-weight: bolder;
 }
 
@@ -63,7 +67,7 @@ p {
 }
 
 .box:hover {
-    background-color: #e0e0e0;
+    background-color: #EDEFF2;
     transform: scale(1.1);
     transition: 500ms;
 }
