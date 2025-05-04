@@ -6,6 +6,8 @@ function handleLogin() {
     const username = document.getElementById('username').value.trim();
     const maxLength = 20;
 
+    const redirectAfterLogin = localStorage.getItem("redirectAfterLogin");
+
     if (username.length > maxLength) {
         alert(`Username must be ${maxLength} characters or less.`);
 
@@ -16,10 +18,9 @@ function handleLogin() {
         //save the username in local storage
         localStorage.setItem('username', username);
 
-        const timestamp = new Date().toLocaleString();
-        const logEntry = `[${timestamp}] Login attempt - ${username}`;
-        console.log(logEntry); //log to console or display somewhere
-        window.location.href = "../index.html";
+        const redirectUrl = redirectAfterLogin || "../index.html";
+        localStorage.removeItem("redirectAfterLogin");
+        window.location.href = redirectUrl;
     } else {
         alert('Please enter a username.');
     }

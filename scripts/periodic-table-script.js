@@ -237,7 +237,7 @@ document.querySelector(".ui-input").addEventListener("input", searchElement);
  */
 document.addEventListener('DOMContentLoaded', function () {
     const username = localStorage.getItem('username');
-    const welcomeMessage = document.getElementById('welcomeMessage');
+    const welcomeMessage = document.getElementById('welcome-message');
     const userInfo = document.getElementById('user-info');
 
     if (username) {
@@ -245,13 +245,4 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         userInfo.style.display = 'none';
     }
-});
-
-/**
- * Logs the user out by removing the username from local storage and redirecting to the periodic table page.
- */
-document.getElementById('logout-button').addEventListener('click', function () {
-    localStorage.removeItem('username');
-
-    window.location.href = 'periodic-table.html';
 });
