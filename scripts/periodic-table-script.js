@@ -1,5 +1,10 @@
 /*electron configuration*/
 
+/**
+ * Loads element data by first attempting to fetch it from the server.
+ * If the server fetch fails, it falls back to loading from a local file.
+ * @returns {Promise<Object>} A promise that resolves to the processed elements data.
+ */
 async function loadData() {
     try {
         return await loadFromServer();
@@ -16,6 +21,11 @@ async function loadData() {
     }
 }
 
+/**
+ * Fetches element data from the server.
+ * @returns {Promise<Object>} A promise that resolves to the processed elements data.
+ * @throws Will throw an error if the server response is not ok or if no data is received.
+ */
 async function loadFromServer() {
     const response = await fetch("https://elements.black2.cf/elements");
 
@@ -35,6 +45,11 @@ async function loadFromServer() {
     return processElements(elementsArray);
 }
 
+/**
+ * Fetches element data from a local file.
+ * @returns {Promise<Object>} A promise that resolves to the processed elements data.
+ * @throws Will throw an error if the file response is not ok or if the data format is invalid.
+ */
 async function loadFromFile() {
     const response = await fetch("../data/elements.json");
 
@@ -51,6 +66,11 @@ async function loadFromFile() {
     return processElements(data.elements);
 }
 
+/**
+ * Processes an array of element objects into a lookup object.
+ * @param {Array} elementsArray - The array of element objects.
+ * @returns {Object} A lookup object with element symbols and names as keys and their configurations as values.
+ */
 function processElements(elementsArray) {
     const elements = {};
 
@@ -61,7 +81,6 @@ function processElements(elementsArray) {
             const name = element.name;
 
             if (config) {
-                // Store both symbol and full name for lookup
                 elements[symbol.toLowerCase()] = `${symbol}-${config}`;
                 elements[name.toLowerCase()] = `${symbol}-${config}`;
             }
@@ -71,6 +90,10 @@ function processElements(elementsArray) {
     return elements;
 }
 
+/**
+ * Searches for an element based on user input and displays its electron configuration.
+ * Highlights the corresponding element in the periodic table if found.
+ */
 async function searchElement() {
     let inputField = document.querySelector(".ui-input");
     let input = inputField.value.trim();
@@ -127,7 +150,6 @@ async function searchElement() {
             resetElementStyles();
         }
     } else {
-        //if the input isn't a number, check if it's a symbol or name
         const elements = await loadData();
         const query = input.toLowerCase();
         const foundString = elements[query];
@@ -156,6 +178,10 @@ async function searchElement() {
     }
 }
 
+/**
+ * Highlights the specified element in the periodic table.
+ * @param {string} input - The symbol or name of the element to highlight.
+ */
 function highlightElement(input) {
     const classes = [
         'alkali-metal',
@@ -188,8 +214,9 @@ function highlightElement(input) {
     });
 }
 
-document.querySelector(".ui-input").addEventListener("input", searchElement);
-
+/**
+ * Resets the styles of all elements in the periodic table to their default state.
+ */
 function resetElementStyles() {
     const tds = document.querySelectorAll('td');
 
@@ -200,8 +227,14 @@ function resetElementStyles() {
     });
 }
 
+document.querySelector(".ui-input").addEventListener("input", searchElement);
+
 /*login*/
 
+/**
+ * Initializes the login functionality by displaying the username if logged in.
+ * Hides user info if no username is found in local storage.
+ */
 document.addEventListener('DOMContentLoaded', function () {
     const username = localStorage.getItem('username');
     const welcomeMessage = document.getElementById('welcomeMessage');
@@ -214,10 +247,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+/**
+ * Logs the user out by removing the username from local storage and redirecting to the periodic table page.
+ */
 document.getElementById('logout-button').addEventListener('click', function () {
-    //remove username from local storage
     localStorage.removeItem('username');
 
-    //redirect to login page
     window.location.href = 'periodic-table.html';
 });

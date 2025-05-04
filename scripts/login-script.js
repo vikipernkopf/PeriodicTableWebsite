@@ -1,3 +1,7 @@
+/**
+ * Handles the login process by validating the username, saving it to local storage,
+ * and redirecting the user to the homepage if valid.
+ */
 function handleLogin() {
     const username = document.getElementById('username').value.trim();
     const maxLength = 20;
