@@ -1,0 +1,60 @@
+body {
+    background-color: #B9D9EB;
+}
+.container {
+    display: flex;
+    flex-direction: row; /* Align boxes in a row */
+    justify-content: space-between; /* Distribute space between boxes */
+    align-items: flex-start; /* Align boxes at the top */
+    gap: 60px; /* Add spacing between boxes */
+    flex-wrap: nowrap; /* Allow wrapping if needed */
+    padding: 70px;
+}
+
+h1 {
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 10px; /* Add spacing between the title and the boxes */
+    margin-top: 110px;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.box {
+    flex: 1 1 calc(33.333% - 20px); /* Keep the width settings */
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 400px; /* Set a minimum height for the boxes */
+    font-size: larger;
+}
+
+p {
+    font-size: 1.2em; /* Increase font size */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+.make-big {
+    font-size: 1.5em; /* Increase font size */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+a{
+    display: flex;
+    background-color: transparent !important; /* Remove the blue background */
+    border: none !important; /* Remove any border */
+    color: inherit !important; /* Inherit text color */
+    padding: 0 !important; /* Reset padding */
+    box-shadow: none !important; /* Remove any shadow */
+    text-decoration: none !important; /* Remove underline */
+}
+
+.box a {
+    display: flex; /* Enable flexbox for the link */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100%; /* Ensure it takes up the full height of the box */
+}
