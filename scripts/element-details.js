@@ -109,32 +109,45 @@ function displayElementInfo(elementData, pubchemData) {
 
     const basicInfo = document.getElementById('basic-info');
 
+    const category = pubchemData?.Record?.Section?.[1]?.Section?.[10]?.Information?.[0]?.Value?.StringWithMarkup?.[0]?.String ?? 'N/A';
+    const group = pubchemData?.Record?.Section?.[1]?.Section?.[11]?.Information?.[0]?.Value?.StringWithMarkup?.[0]?.String ?? 'N/A';
+    const period = pubchemData?.Record?.Section?.[1]?.Section?.[12]?.Information?.[0]?.Value?.StringWithMarkup?.[0]?.String ?? 'N/A';
+
     basicInfo.innerHTML = `
         <h2>Basic Information</h2>
-        <p>Atomic Number: ${elementData.atomicNumber}</p>
-        <p>Atomic Mass: ${elementData.atomicMass}</p>
-        <p>Phase: ${elementData.phase}</p>
-        <p>Category: ${pubchemData.Record.Section[1].Section[10].Information[0].Value.StringWithMarkup[0].String}</p>
-        <p>Group: ${pubchemData.Record.Section[1].Section[11].Information[0].Value.StringWithMarkup[0].String}</p>
-        <p>Period: ${pubchemData.Record.Section[1].Section[12].Information[0].Value.StringWithMarkup[0].String}</p>
+        <p>Atomic Number: ${elementData?.atomicNumber ?? 'N/A'}</p>
+        <p>Atomic Mass: ${elementData?.atomicMass ?? 'N/A'}</p>
+        <p>Phase: ${elementData?.phase ?? 'N/A'}</p>
+        <p>Category: ${category}</p>
+        <p>Group: ${group}</p>
+        <p>Period: ${period}</p>
     `;
 
     const additionalInfo = document.getElementById('additional-info');
 
+    const electronConfiguration = elementData?.electronConfiguration ?? 'N/A';
+    const electronegativity = pubchemData?.Record?.Section?.[1]?.Section?.[6]?.Information?.[0]?.Value?.Number?.[0] ?? 'N/A';
+    const electronegativeUnit = pubchemData?.Record?.Section?.[1]?.Section?.[6]?.Information?.[0]?.Value?.Unit ?? '';
+    const density = pubchemData?.Record?.Section?.[1]?.Section?.[13]?.Information?.[0]?.Value?.StringWithMarkup?.[0]?.String ?? 'N/A';
+
     additionalInfo.innerHTML = `
         <h2>Additional Information</h2>
-        <p>Electron configuration: ${elementData.electronConfiguration}</p>
-        <p>Electronegativity: ${pubchemData.Record.Section[1].Section[6].Information[0].Value.Number[0]} ${pubchemData.Record.Section[1].Section[6].Information[0].Value.Unit}</p>
-        <p>Density: ${pubchemData.Record.Section[1].Section[13].Information[0].Value.StringWithMarkup[0].String}</p>
+        <p>Electron configuration: ${electronConfiguration}</p>
+        <p>Electronegativity: ${electronegativity} ${electronegativeUnit}</p>
+        <p>Density: ${density}</p>
     `;
 
     const text = document.getElementById('text');
 
+    const description1 = pubchemData?.Record?.Section?.[3]?.Information?.[0]?.Value?.StringWithMarkup?.[0]?.String ?? '';
+    const description2 = pubchemData?.Record?.Section?.[3]?.Information?.[0]?.Value?.StringWithMarkup?.[1]?.String ?? '';
+    const description3 = pubchemData?.Record?.Section?.[2]?.Information?.[0]?.Value?.StringWithMarkup?.[0]?.String ?? '';
+
     text.innerHTML = `
         <h2>Description</h2>
-        <p>${pubchemData.Record.Section[3].Information[0].Value.StringWithMarkup[0].String}</p>
-        <p>${pubchemData.Record.Section[3].Information[0].Value.StringWithMarkup[1].String}</p>
-        <p>${pubchemData.Record.Section[2].Information[0].Value.StringWithMarkup[0].String}</p>
+        ${description1 ? `<p>${description1}</p>` : ''}
+        ${description2 ? `<p>${description2}</p>` : ''}
+        ${description3 ? `<p>${description3}</p>` : ''}
     `;
 }
 
