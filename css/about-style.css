@@ -27,7 +27,8 @@ h1 {
 }
 
 .box {
-    flex: 1 1 calc(33.333% - 20px); /*keep the width settings*/
+    position: relative; /* Establish a positioning context for child elements */
+    flex: 1 1 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
     box-sizing: border-box;
     background-color: #f0f0f0;
@@ -37,6 +38,7 @@ h1 {
     min-height: 400px;
     transition: 500ms;
 }
+/* Adjust the box size and spacing */
 
 .box:hover {
     background-color: #EDEFF2;
@@ -55,17 +57,27 @@ p {
 }
 
 .github-image-container {
+    position: absolute; /* Anchor the logo to the bottom of the box */
+    bottom: 10px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
     display: flex;
+    padding-bottom: 10px;
+    padding-top: 300px !important;
     background-color: transparent !important;
     border: none !important;
-    padding: 0 !important;
     box-shadow: none !important;
     text-decoration: none !important;
     align-items: center;
     justify-content: center;
+    margin-top: 210px !important;
 }
 
 .github-image-container img {
     width: 65px;
     height: 65px;
+}
+
+.text {
+    margin-bottom: 50px;
 }
