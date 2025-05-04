@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
-    const loginNavItem = document.querySelector(".nav-link[href='login.html']");
+    const loginNavItem = document.querySelector(".log-in-nav-item");
 
     if (navbar && loginNavItem) {
         const username = localStorage.getItem("username");
