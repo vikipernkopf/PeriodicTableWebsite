@@ -59,7 +59,7 @@ button:hover {
 
 .navbar-nav {
     display: flex;
-    gap: 0;
+    gap: 15px;
 }
 
 .nav-item {
