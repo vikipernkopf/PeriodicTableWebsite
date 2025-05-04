@@ -75,6 +75,10 @@ tr {
 }
 
 td {
+    padding: 10px 10px;
+    border-radius: 13px;
+    text-align: center;
+    margin: 10px 0;
     min-width: 70px;
     position: relative;
     transition: transform 0.2s ease;
@@ -82,11 +86,9 @@ td {
 
 #description tr td {
     min-width: 170px !important;
+    padding: 0;
+    margin: 0;
 }
-
-/*#extra-elements td {
-    min-width: 65px;
-}*/
 
 td:hover {
     transform: scale(1.1);

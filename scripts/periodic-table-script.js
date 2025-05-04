@@ -229,6 +229,21 @@ function resetElementStyles() {
 
 document.querySelector(".ui-input").addEventListener("input", searchElement);
 
+function initializeElementClicks() {
+    const elements = document.querySelectorAll('.cell');
+
+    elements.forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            const symbol = this.textContent;
+            window.location.href = `element-details.html?element=${symbol}`;
+        });
+    });
+}
+
+// Add this line at the end of your existing code
+document.addEventListener('DOMContentLoaded', initializeElementClicks);
+
 /*login*/
 
 /**
