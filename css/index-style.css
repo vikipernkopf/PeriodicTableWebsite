@@ -74,9 +74,7 @@ body {
 }
 
 .about:hover {
-    background: rgb(34, 100, 166);
-    color: #D8ECF7;
-    border: 2px solid #D8ECF7;
+    transform: scale(1.05);
     transition: 150ms;
 }
 
