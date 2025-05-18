@@ -10,6 +10,7 @@ async function getCompoundInfo(cid) {
         const res = await fetch(url);
         const data = await res.json();
         const commonName = data.Record?.RecordTitle || "Unknown";
+
         return commonName.toLowerCase();
     } catch (error) {
         console.error("Error fetching common name:", error);
@@ -17,13 +18,14 @@ async function getCompoundInfo(cid) {
     }
 }
 
-
 function displayWordProgress() {
     const display = word
         .split('')
         .map(char => (guessed.includes(char) ? char : '_'))
         .join(' ');
+
     document.getElementById("word").textContent = display;
+
     return display;
 }
 
@@ -41,9 +43,11 @@ function handleGuess(letter) {
     if (!letter.match(/^[a-z]$/) || guessed.includes(letter) || attempts <= 0) return;
 
     guessed.push(letter);
+
     if (!word.includes(letter)) {
         attempts--;
         updateStatus(`❌ ${attempts} attempts left ❌`);
+
         document.getElementById("used_letters").innerHTML = guessed
             .filter(l => !word.includes(l))
             .join(' ');
@@ -52,6 +56,7 @@ function handleGuess(letter) {
     }
 
     const currentDisplay = displayWordProgress();
+
     if (!currentDisplay.includes('_')) {
         endGame(`🎉 You win! The word was: ${word}`);
     } else if (attempts === 0) {
@@ -62,6 +67,7 @@ function handleGuess(letter) {
 function createLetterButtons() {
     const container = document.getElementById("letters");
     container.innerHTML = "";
+
     for (let i = 97; i <= 122; i++) {
         const letter = String.fromCharCode(i);
         const btn = document.createElement("button");
@@ -96,6 +102,10 @@ async function startHangman() {
     document.addEventListener("keydown", onKeyDown);
 }
 
-
-startHangman();
+startHangman().then(_ => {
+    console.log("Hangman game started");
+}).catch(e => {
+    console.error("Error starting Hangman game:", e);
+    updateStatus("❌ Failed to start game.");
+});
     

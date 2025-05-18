@@ -4,9 +4,12 @@ body {
     background: #B9D9EB;
     text-align: center;
 }
+
 #word {
     font-size: 2em;
-    letter-spacing: 0.2em; }
+    letter-spacing: 0.2em;
+}
+
 #letters button {
     margin: 4px;
     background: #7abbe3;
@@ -30,7 +33,7 @@ body {
     margin-bottom: 50px;
 }
 
-#used_letters{
+#used_letters {
     display: flex;
     justify-content: center;
     align-items: center;
