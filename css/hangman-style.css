@@ -1,5 +1,5 @@
 body {
-    margin-top: 300px;
+    margin-top: 5vh;
     font-family: sans-serif;
     background: #B9D9EB;
     text-align: center;
@@ -11,10 +11,10 @@ body {
 }
 
 #letters button {
-    margin: 4px;
+    margin: 0.5em;
     background: #7abbe3;
-    border: 2px solid #6b8cf3;
-    border-radius: 5px;
+    border: 0.15em solid #6b8cf3;
+    border-radius: 0.3em;
     font-size: 1.5em;
 }
 
@@ -23,14 +23,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 1.25em;
     font-size: 2em;
     background: white;
-    padding: 20px ;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-right: 500px;
-    margin-left: 500px;
-    margin-bottom: 50px;
+    padding: 0.5em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+    max-width: 20em;
+    margin: 0 auto 3em auto;
 }
 
 #used_letters {
@@ -38,12 +37,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 1.25em;
     font-size: 2em;
     background: white;
-    padding: 20px ;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-right: 800px;
-    margin-left: 800px;
-    margin-top: 50px;
+    padding: 0.5em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+    max-width: 20em;
+    margin: 5em auto 0 auto;
 }
