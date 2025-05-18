@@ -1,28 +1,34 @@
 # Progress Since Last Time
 
 ## Future Plans:
-- [ ] Upgrade the login page to include a registration form.
-- [ ] Add different colored themes to the website.
-- [ ] Create a memory game
+- [ ] Upgrade the login page to include a registration form
+- [ ] Add different colored themes to the website
+- [ ] Add more features to the memory/flashcards game such as keeping track of your score
+- [ ] Make a separate games section
 
 ## New Features:
-- [ ] Added a hangman game.
-- [ ] Updated the navbar.
+- [ ] Added a hangman game
+- [ ] Added a memory/flashcards game
+- [ ] Updated the navbar
 
-## Bugs:
-- [ ] Fixed the hangman game small bugs.
-- [ ] Fixed the navbar showing multiple times the "about" page.
-- [ ] Fixed the navbar being slightly on the right and not covering fully the upper part of the website.
-- [ ] Favicon not showing in the website.
+## Bug Fixes:
+- [ ] Fixed the hangman game's small bugs
+- [ ] Fixed the navbar showing the "about" page multiple times
+- [ ] Fixed the navbar being slightly on the right side and not fully covering the upper part of the website
+- [ ] Fixed the Favicon not showing up
+- [ ] Fixed the 404-error when trying to access the login page from index.html due to path issues
+
+## Known Issues:
+- [ ] The box with used letters in the hangman game also shows up if it's empty
 
 ## Commits:
 
 ### Antonio:
-- [ ] 11 commits
+- [ ] 13 commits
 ### Viktoria:
-- [ ] ? commits
+- [ ] 8 commits
 ### Jazmin:
-- [ ] ? commits
+- [ ] 0 commits
 
-### Total commits since beginning of project: 230
-### Total commits since last review: 11 
+Total commits since the beginning of the project: 240
+Total commits since the last sprint: 20
