@@ -18,11 +18,11 @@
 ## Commits:
 
 ### Antonio:
-- [ ] 8 commits
+- [ ] 11 commits
 ### Viktoria:
 - [ ] ? commits
 ### Jazmin:
 - [ ] ? commits
 
-### Total commits since beginning of project: 227
-### Total commits since last review: 8
+### Total commits since beginning of project: 230
+### Total commits since last review: 11 
