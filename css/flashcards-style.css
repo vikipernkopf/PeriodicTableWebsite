@@ -72,7 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 2px solid rgb(34, 100, 166);
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 50px;
     background: #D8ECF7;
     font-size: 20px;
@@ -87,4 +87,32 @@ body {
 #next-card:hover {
     transform: scale(1.05);
     transition: 150ms;
+}
+
+.mode-toggle {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 2px solid rgb(34, 100, 166);
+    border-radius: 30px;
+    background: #D8ECF7;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.05);
+    transition: 150ms;
+    background: #D8ECF7;
+}
+
+#atomic-number {
+    font-size: 4rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    hyphens: auto;
 }
