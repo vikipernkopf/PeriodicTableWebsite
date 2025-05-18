@@ -27,7 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
             loginNavItem.addEventListener("click", function (event) {
                 event.preventDefault();
                 localStorage.setItem("redirectAfterLogin", window.location.href);
-                window.location.href = "login.html";
+
+                const isIndexPage = window.location.pathname.endsWith('index.html') ||
+                    window.location.pathname.endsWith('/');
+
+                window.location.href = isIndexPage ? "html/login.html" : "login.html";
             });
         }
     }
