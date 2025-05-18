@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
+    <title>Flashcards</title>
     <link rel="icon" type="favicon" href="../pics/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/about-style.css">
+    <link rel="stylesheet" href="../css/flashcards-style.css">
     <script src="../scripts/script.js" defer></script>
     <script src="../scripts/navigation-bar-script.js" defer></script>
 </head>
@@ -16,13 +16,13 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../pics/logo.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top navbar-logo">
+                <img src="../pics/logo.png" alt="Logo" width="32" height="32" class="me-2">
                 Periodic Table
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -38,10 +38,10 @@
                     <a class="nav-link navbar-content" href="hangman.html">HangMan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbar-content" href="flashcards.html">Flashcards</a>
+                    <a class="nav-link navbar-content navbar-highlighted" href="flashcards.html">Flashcards</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbar-content navbar-highlighted" href="about.html">About</a>
+                    <a class="nav-link navbar-content" href="about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -82,14 +82,14 @@
                 <ul class="theme-popup__list">
                     <li>
                         <label for="default">
-                            <span class="theme-popup__icons">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 2.52267C6.13332 2.64713 4.86254 3.27802 3.9372 4.29146C3.01186 5.3049 2.49882 6.62766 2.49882 8C2.49882 9.37234 3.01186 10.6951 3.9372 11.7085C4.86254 12.722 6.13332 13.3529 7.5 13.4773V2.52267ZM1.5 8C1.5 4.41 4.41 1.5 8 1.5C11.59 1.5 14.5 4.41 14.5 8C14.5 11.59 11.59 14.5 8 14.5C4.41 14.5 1.5 11.59 1.5 8Z" fill="currentColor"></path>
-                                </svg>
-                            </span>
+                                <span class="theme-popup__icons">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 2.52267C6.13332 2.64713 4.86254 3.27802 3.9372 4.29146C3.01186 5.3049 2.49882 6.62766 2.49882 8C2.49882 9.37234 3.01186 10.6951 3.9372 11.7085C4.86254 12.722 6.13332 13.3529 7.5 13.4773V2.52267ZM1.5 8C1.5 4.41 4.41 1.5 8 1.5C11.59 1.5 14.5 4.41 14.5 8C14.5 11.59 11.59 14.5 8 14.5C4.41 14.5 1.5 11.59 1.5 8Z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
                             <span>
-                                OS Default
-                            </span>
+                                    OS Default
+                                </span>
                         </label>
                     </li>
                     <li>
@@ -108,80 +108,31 @@
                             </span>
                             <span>
                                 Light
-                            </span>
+                                </span>
                         </label>
                     </li>
                     <li>
                         <label for="dark">
-                            <span class="theme-popup__icons">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_78_60)">
-                                        <path d="M7.24135 14C10.1123 13.9981 12.6803 12.2445 13.7367 9.59537C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" fill="currentColor"></path>
-                                    </g>
-                                    <defs>
-                                        <clipPath>
-                                            <rect width="14" height="14" fill="currentColor"></rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
+                                <span class="theme-popup__icons">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_78_60)">
+                                            <path d="M7.24135 14C10.1123 13.9981 12.6803 12.2445 13.7367 9.59537C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" fill="currentColor"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath>
+                                                <rect width="14" height="14" fill="currentColor"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
                             <span>
-                                Night
-                            </span>
+                                    Dark
+                                </span>
                         </label>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <h1>About the developers...</h1>
-    <div class="container">
-        <div class="box">
-            <div class="text">
-                <p class="heading">Antonio Petrov</p>
-                <p>
-                    I’m a student at HTL Leonding, and I worked on this chemistry website with my group for our website programming class. I mainly helped with designing, coding, general structure, and much more, and we aimed to make the content clear and easy to understand.
-                </p>
-                <p>
-                    This project helped me improve my teamwork and creativity skills, and it was fun to combine science with web development. In my free time, I enjoy playing games, especially volleyball.
-                </p>
-            </div>
-            <a href="https://github.com/antonio040" target="_blank" class="btn btn-primary github-image-container">
-                <img src="../pics/github-logo.png" alt="github page">
-            </a>
-        </div>
-        <div class="box">
-            <div class="text">
-                <p class="heading">Jazmin Gonzalez</p>
-                <p>
-                    For this school project, we built a website on chemistry for our website programming class. I helped with the design of the pages, and we all worked together to finish the content and design.
-                </p>
-                <p>
-                    It was a good experience that taught me more about web development and how to plan a group project. Outside of school, I enjoy reading.
-                </p>
-            </div>
-            <a href="https://github.com/JazminGonazlez" target="_blank" class="btn btn-primary github-image-container">
-                <img src="../pics/github-logo.png" alt="github page">
-            </a>
-        </div>
-        <div class="box">
-            <div class="text">
-                <p class="heading">Viktoria Pernkopf</p>
-                <p>
-                    I’m a student at HTL Leonding, and I helped build this chemistry-themed website with my group for our website programming class. Our goal was to make a clear and informative site about the periodic table, its history, and electron configuration.
-                </p>
-                <p>
-                    I mainly focused on the usage of APIs and design. I learned a lot about web design and how to present information in a user-friendly way.
-                </p>
-                <p>
-                    Outside of class, I enjoy playing video games, and this project was a fun way to apply programming to a real topic.
-                </p>
-            </div>
-            <a href="https://github.com/vikipernkopf" target="_blank" class="btn btn-primary github-image-container">
-                <img src="../pics/github-logo.png" alt="github page">
-            </a>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

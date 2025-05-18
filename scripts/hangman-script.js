@@ -108,4 +108,3 @@ startHangman().then(_ => {
     console.error("Error starting Hangman game:", e);
     updateStatus("❌ Failed to start game.");
 });
-    
