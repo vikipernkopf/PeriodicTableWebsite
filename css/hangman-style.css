@@ -1,7 +1,7 @@
 body {
     margin-top: 300px;
     font-family: sans-serif;
-
+    background: #B9D9EB;
     text-align: center;
 }
 #word {
@@ -13,4 +13,34 @@ body {
     border: 2px solid #6b8cf3;
     border-radius: 5px;
     font-size: 1.5em;
+}
+
+#status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    font-size: 2em;
+    background: white;
+    padding: 20px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-bottom: 50px;
+}
+
+#used_letters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    font-size: 2em;
+    background: white;
+    padding: 20px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 800px;
+    margin-left: 800px;
+    margin-top: 50px;
 }

@@ -4,21 +4,19 @@ let guessed = [];
 let attempts = 7;
 
 async function getCompoundInfo(cid) {
-    const url = `https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/${cid}/property/IUPACName,MolecularFormula/JSON`;
+    const url = `https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/${cid}/JSON`;
 
     try {
         const res = await fetch(url);
         const data = await res.json();
-        const compound = data.PropertyTable.Properties[0];
-        return {
-            name: compound.IUPACName.toLowerCase(),
-            formula: compound.MolecularFormula
-        };
+        const commonName = data.Record?.RecordTitle || "Unknown";
+        return commonName.toLowerCase();
     } catch (error) {
-        console.error("Error fetching compound:", error);
+        console.error("Error fetching common name:", error);
         return null;
     }
 }
+
 
 function displayWordProgress() {
     const display = word
@@ -45,9 +43,12 @@ function handleGuess(letter) {
     guessed.push(letter);
     if (!word.includes(letter)) {
         attempts--;
-        updateStatus(`❌ Wrong! Attempts left: ${attempts}`);
+        updateStatus(`❌ ${attempts} attempts left ❌`);
+        document.getElementById("used_letters").innerHTML = guessed
+            .filter(l => !word.includes(l))
+            .join(' ');
     } else {
-        updateStatus("✅ Correct!");
+        updateStatus("Correct ✅");
     }
 
     const currentDisplay = displayWordProgress();
@@ -77,24 +78,24 @@ function onKeyDown(e) {
 
 async function startHangman() {
     const cid = Math.floor(Math.random() * 100) + 1;
-    const compound = await getCompoundInfo(cid);
+    const compoundName = await getCompoundInfo(cid);
 
-    if (!compound) {
+    if (!compoundName) {
         updateStatus("❌ Failed to load compound.");
         return;
     }
 
-    word = compound.name.replace(/[^a-z]/g, '');
-    clue = compound.formula;
+    word = compoundName.replace(/[^a-z]/g, '');
+    clue = ""; // coming in the future
     guessed = [];
     attempts = 7;
 
-    document.getElementById("clue").textContent = `Clue: Molecular formula is ${clue}`;
     displayWordProgress();
     createLetterButtons();
     updateStatus("Start guessing!");
     document.addEventListener("keydown", onKeyDown);
 }
+
 
 startHangman();
     
