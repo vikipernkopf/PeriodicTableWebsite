@@ -30,5 +30,5 @@
 ### Jazmin:
 - [ ] 0 commits
 
-Total commits since the beginning of the project: 240
+Total commits since the beginning of the project: 240\
 Total commits since the last sprint: 20
